@@ -1,0 +1,50 @@
+<!doctype html><html><head><meta charset="utf-8"><style>html,body{margin:0;background:#0d0b0a}svg{display:block}</style></head><body>
+<svg width="640" height="640" viewBox="0 0 640 640" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1a0f0b"/><stop offset="1" stop-color="#120c1f"/></linearGradient>
+  <filter id="blur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="55"/></filter>
+  <filter id="sombra" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#000" flood-opacity=".55"/></filter>
+  <filter id="brilho" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="24"/></filter>
+  <linearGradient id="papel" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff7f0"/><stop offset="1" stop-color="#f3dccb"/></linearGradient>
+  <linearGradient id="laranja" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f4a27c"/><stop offset=".55" stop-color="#d97757"/><stop offset="1" stop-color="#b4532f"/></linearGradient>
+  <linearGradient id="sino" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#c4b5fd"/><stop offset="1" stop-color="#7c3aed"/></linearGradient>
+  <linearGradient id="reflexo" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".45"/><stop offset=".6" stop-color="#fff" stop-opacity="0"/></linearGradient>
+  <pattern id="grade" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity=".06" stroke-width="1.5"/></pattern>
+  <radialGradient id="vinheta" cx=".5" cy=".5" r=".6"><stop offset=".55" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".55"/></radialGradient>
+</defs>
+<rect width="640" height="640" fill="url(#bg)"/>
+<g filter="url(#blur)" opacity=".9">
+  <circle cx="140" cy="160" r="150" fill="#d97757"/><circle cx="510" cy="150" r="130" fill="#7c3aed" opacity=".8"/>
+  <circle cx="480" cy="520" r="150" fill="#0ea5e9" opacity=".55"/><circle cx="120" cy="530" r="120" fill="#f59e0b" opacity=".5"/>
+</g>
+<rect width="640" height="640" fill="url(#grade)"/>
+<rect width="640" height="640" fill="url(#vinheta)"/>
+<!-- brilho atras do jornal -->
+<ellipse cx="320" cy="350" rx="200" ry="150" fill="#d97757" opacity=".55" filter="url(#brilho)"/>
+<!-- jornal de novidades -->
+<g filter="url(#sombra)" transform="rotate(-6 320 350)">
+  <rect x="168" y="200" width="300" height="300" rx="28" fill="url(#papel)" stroke="#ffffff" stroke-opacity=".8" stroke-width="3"/>
+  <rect x="168" y="200" width="300" height="74" rx="28" fill="url(#laranja)"/>
+  <rect x="168" y="246" width="300" height="28" fill="url(#laranja)"/>
+  <rect x="196" y="224" width="150" height="16" rx="8" fill="#fff7f0" opacity=".95"/>
+  <rect x="196" y="248" width="96" height="10" rx="5" fill="#fff7f0" opacity=".7"/>
+  <!-- foto da materia: brilho -->
+  <rect x="196" y="298" width="112" height="100" rx="14" fill="#2a1a14"/>
+  <path d="M252 314 C256 336 262 342 284 348 C262 354 256 360 252 382 C248 360 242 354 220 348 C242 342 248 336 252 314 Z" fill="url(#laranja)"/>
+  <!-- linhas de texto -->
+  <g fill="#c9a892"><rect x="324" y="302" width="118" height="12" rx="6"/><rect x="324" y="326" width="96" height="12" rx="6"/>
+  <rect x="324" y="350" width="112" height="12" rx="6"/><rect x="324" y="374" width="74" height="12" rx="6"/>
+  <rect x="196" y="420" width="246" height="12" rx="6"/><rect x="196" y="444" width="210" height="12" rx="6"/></g>
+</g>
+<!-- sininho de aviso -->
+<g transform="translate(468 196) rotate(16)" filter="url(#sombra)">
+  <path d="M-58 34 C-50 26 -46 14 -46 -6 C-46 -36 -26 -56 0 -56 C26 -56 46 -36 46 -6 C46 14 50 26 58 34 Z" fill="url(#sino)" stroke="#ede9fe" stroke-width="3"/>
+  <path d="M-46 -6 C-46 -36 -26 -56 0 -56 C26 -56 46 -36 46 -6 C20 -18 -20 -18 -46 -6 Z" fill="url(#reflexo)"/>
+  <rect x="-64" y="32" width="128" height="14" rx="7" fill="#ede9fe"/>
+  <circle cx="0" cy="58" r="13" fill="#ede9fe"/>
+  <circle cx="0" cy="-62" r="8" fill="#ede9fe"/>
+  <circle cx="44" cy="-46" r="20" fill="#ef4444" stroke="#fff" stroke-width="4"/>
+</g>
+<!-- brilhos -->
+<g fill="#fff"><path d="M150 250 l5 13 13 5 -13 5 -5 13 -5 -13 -13 -5 13 -5z" opacity=".85"/><path d="M520 380 l4 10 10 4 -10 4 -4 10 -4 -10 -10 -4 10 -4z" opacity=".7"/><path d="M230 140 l3 7 7 3 -7 3 -3 7 -3 -7 -7 -3 7 -3z" opacity=".6"/></g>
+</svg></body></html>
