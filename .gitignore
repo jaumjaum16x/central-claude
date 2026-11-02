@@ -1,0 +1,8 @@
+# segredos e arquivos so do PC - nunca sobem pro GitHub
+telegram.json
+/estado.json
+erros.log
+central.html
+*.png
+__pycache__/
+_site/
