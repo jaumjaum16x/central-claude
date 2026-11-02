@@ -499,11 +499,9 @@ def card(it):
     original = it["titulo"] if it.get("titulo_pt") and it["titulo_pt"] != it["titulo"] else ""
     novo = "<span class='novo'>novo</span>" if AGORA - it.get("visto", 0) < 2 * 86400 else ""
     busca = attr(" ".join([it["titulo"], it.get("titulo_pt", ""), it["resumo"], it.get("resumo_pt", "")] + tops).lower())
-    pesquisa = it["titulo"] + ("" if re.search(r"claude|anthropic", it["titulo"], re.I) else " Claude Anthropic")
     acoes = (f'<div class="acoes"><a class="btn ia" href="{attr(link_explica(it))}" target="_blank" rel="noopener" '
              f'title="Abre o Claude ja com a pergunta pronta sobre essa novidade">✨ Me explica</a>'
-             f'<a class="btn" href="https://www.google.com/search?q={urllib.parse.quote(pesquisa)}" target="_blank" rel="noopener">\U0001F50E Pesquisar</a>'
-             f'<a class="btn" href="{attr(it["url"])}" target="_blank" rel="noopener">\U0001F517 Fonte</a></div>')
+             f'{botoes_busca(it)}<a class="btn" href="{attr(it["url"])}" target="_blank" rel="noopener">\U0001F517 Fonte</a></div>')
     return (f'<article class="card" data-cat="{it["cat"]}" data-busca="{busca}" style="--c:{cor}">'
             f'<div class="topo"><span class="cat">{emoji} {nome}</span>{novo}<time>{data_br(it["ts"])}</time></div>'
             f'<h3><a href="{esc(it["url"])}" target="_blank" rel="noopener">{esc(it.get("titulo_pt") or it["titulo"])}</a></h3>'
@@ -512,6 +510,29 @@ def card(it):
             + (f'<p class="info">{esc(it["info"])}</p>' if it.get("info") else "")
             + (f'<details{" open" if len(tops) <= 4 else ""}><summary>{len(tops)} item(ns)</summary><ul>{lista}{mais}</ul></details>' if tops else "")
             + acoes + "</article>")
+
+
+VAZIAS = re.compile(r"^(apresentando|lan[cç]amento d[eoa]s?|lan[cç]amos|anunciando|anunciamos|novidade:?|agora,?)\s+", re.I)
+
+
+def termo_busca(it):
+    """Assunto curto em portugues pra buscar noticias e videos (titulo inteiro acha pouca coisa)."""
+    if it["cat"] == "code":
+        return "Claude Code novidades atualizacao"
+    t = VAZIAS.sub("", it.get("titulo_pt") or it["titulo"])
+    palavras = re.sub(r"[^\w\s.-]", " ", t).split()[:9]
+    while len(palavras) > 2 and palavras[-1].lower() in ("e", "com", "de", "da", "do", "das", "dos", "no", "na", "para", "pra", "em", "a", "o", "os", "as", "um", "uma"):
+        palavras.pop()
+    t = " ".join(palavras)
+    return t if re.search(r"claude|anthropic", t, re.I) else f"Claude {t}"
+
+
+def botoes_busca(it):
+    q = urllib.parse.quote(termo_busca(it))
+    return (f'<a class="btn" href="https://www.google.com/search?q={q}&tbm=nws&hl=pt-BR&gl=BR" target="_blank" '
+            f'rel="noopener" title="Noticias em portugues sobre isso">\U0001F4F0 Noticias</a>'
+            f'<a class="btn" href="https://www.youtube.com/results?search_query={q}" target="_blank" '
+            f'rel="noopener" title="Videos sobre isso no YouTube">▶️ Videos</a>')
 
 
 def attr(s):
@@ -571,7 +592,7 @@ def destaque_grande(it):
             f'<h3><a href="{attr(it["url"])}" target="_blank" rel="noopener">{esc(it.get("titulo_pt") or it["titulo"])}</a></h3>'
             f'<p>{esc(resumo[:260])}</p>'
             f'<div class="acoes"><a class="btn ia" href="{attr(link_explica(it))}" target="_blank" rel="noopener">✨ Me explica</a>'
-            f'<a class="btn" href="{attr(it["url"])}" target="_blank" rel="noopener">\U0001F517 Fonte</a></div></article>')
+            f'{botoes_busca(it)}</div></article>')
 
 
 def gerar_pagina(estado, erros):
