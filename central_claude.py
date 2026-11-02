@@ -498,7 +498,12 @@ def card(it):
     mais = f"<li class='apagado'>+{len(tops) - 30} no link</li>" if len(tops) > 30 else ""
     original = it["titulo"] if it.get("titulo_pt") and it["titulo_pt"] != it["titulo"] else ""
     novo = "<span class='novo'>novo</span>" if AGORA - it.get("visto", 0) < 2 * 86400 else ""
-    busca = esc(" ".join([it["titulo"], it.get("titulo_pt", ""), it["resumo"], it.get("resumo_pt", "")] + tops).lower())
+    busca = attr(" ".join([it["titulo"], it.get("titulo_pt", ""), it["resumo"], it.get("resumo_pt", "")] + tops).lower())
+    pesquisa = it["titulo"] + ("" if re.search(r"claude|anthropic", it["titulo"], re.I) else " Claude Anthropic")
+    acoes = (f'<div class="acoes"><a class="btn ia" href="{attr(link_explica(it))}" target="_blank" rel="noopener" '
+             f'title="Abre o Claude ja com a pergunta pronta sobre essa novidade">✨ Me explica</a>'
+             f'<a class="btn" href="https://www.google.com/search?q={urllib.parse.quote(pesquisa)}" target="_blank" rel="noopener">\U0001F50E Pesquisar</a>'
+             f'<a class="btn" href="{attr(it["url"])}" target="_blank" rel="noopener">\U0001F517 Fonte</a></div>')
     return (f'<article class="card" data-cat="{it["cat"]}" data-busca="{busca}" style="--c:{cor}">'
             f'<div class="topo"><span class="cat">{emoji} {nome}</span>{novo}<time>{data_br(it["ts"])}</time></div>'
             f'<h3><a href="{esc(it["url"])}" target="_blank" rel="noopener">{esc(it.get("titulo_pt") or it["titulo"])}</a></h3>'
@@ -506,7 +511,67 @@ def card(it):
             + (f'<p>{esc(it.get("resumo_pt") or it["resumo"])}</p>' if it["resumo"] else "")
             + (f'<p class="info">{esc(it["info"])}</p>' if it.get("info") else "")
             + (f'<details{" open" if len(tops) <= 4 else ""}><summary>{len(tops)} item(ns)</summary><ul>{lista}{mais}</ul></details>' if tops else "")
-            + "</article>")
+            + acoes + "</article>")
+
+
+def attr(s):
+    return html.escape(s or "", quote=True)
+
+
+def link_explica(it):
+    """Abre o claude.ai com a pergunta pronta sobre a novidade."""
+    detalhes = it["resumo"] or "\n".join(f"- {t}" for t in it["topicos"][:10])
+    pergunta = (f"Me explica em portugues, de um jeito simples, essa novidade do Claude ({data_br(it['ts'])}):\n\n"
+                f"\"{it['titulo']}\"\n{detalhes[:900]}\nFonte: {it['url']}\n\n"
+                "Quero entender: o que e, pra que serve, o que muda pra mim como usuario e um exemplo pratico de como usar.")
+    return "https://claude.ai/new?q=" + urllib.parse.quote(pergunta[:1800])
+
+
+# termos que ganham explicacao ao passar o mouse (e aparecem no glossario)
+GLOSSARIO = [
+    ("Claude Code", r"Claude Code", "Ferramenta do Claude pra programar: le, edita e roda codigo no seu computador, pelo terminal, app de desktop, web ou dentro do editor."),
+    ("Opus", r"\bOpus\b", "O modelo mais capaz da familia Claude, pra tarefas dificeis. E o mais caro e um pouco mais lento."),
+    ("Sonnet", r"\bSonnet\b", "O modelo equilibrado do Claude: muito bom, rapido e com preco medio. O do dia a dia."),
+    ("Haiku", r"\bHaiku\b", "O modelo mais rapido e barato do Claude, bom pra tarefas simples e em grande quantidade."),
+    ("API", r"\bAPI\b", "O jeito de programas usarem o Claude por codigo, pagando pelo uso (em tokens). E o que os apps e sites usam por tras."),
+    ("Console", r"\bConsole\b", "Site dos desenvolvedores do Claude: cria chaves da API, mostra custos e deixa testar prompts."),
+    ("Tokens", r"\btokens?\b", "Pedacinhos de texto (mais ou menos 3/4 de uma palavra). Precos e limites da API sao medidos em tokens."),
+    ("Contexto", r"\b(janela de contexto|contexto|context window)\b", "Quanto texto o Claude consegue considerar de uma vez: a conversa, os arquivos e as instrucoes juntos."),
+    ("MCP", r"\bMCP\b", "Model Context Protocol: padrao aberto que conecta o Claude a outros apps e servicos (GitHub, Google Drive, bancos de dados...)."),
+    ("Skills", r"\b(skills?|habilidades)\b", "Pacotes de instrucoes e arquivos que ensinam o Claude a fazer uma tarefa do seu jeito. Ele carrega sozinho quando precisa."),
+    ("Subagentes", r"\bsub-?agentes?\b|\bsubagents?\b", "Ajudantes que o Claude cria pra fazer partes do trabalho em paralelo, cada um com seu proprio contexto."),
+    ("Agente", r"\bagentes?\b|\bagents?\b|\bag[eê]ntic[oa]s?\b", "Quando o Claude executa uma tarefa em varias etapas sozinho, usando ferramentas, em vez de so responder uma pergunta."),
+    ("Hooks", r"\bhooks?\b", "Comandos que rodam automaticamente em certos momentos do Claude Code, tipo formatar o codigo depois de cada edicao."),
+    ("Plugins", r"\bplugins?\b", "Pacotes que juntam comandos, skills, agentes e conexoes MCP pra instalar no Claude Code de uma vez."),
+    ("Artefatos", r"\bartefatos?\b|\bartifacts?\b", "Conteudo que o Claude cria ao lado da conversa (pagina, app, documento, grafico) e que da pra ver, editar e compartilhar."),
+    ("Projetos", r"\bProjetos\b|\bProjects\b", "Espacos no claude.ai com arquivos e instrucoes que valem pra todas as conversas dentro deles."),
+    ("Beta", r"\bbeta\b", "Recurso novo ainda em teste. Pode mudar e as vezes precisa ser ativado na mao."),
+    ("Previa de pesquisa", r"pr[eé]via de pesquisa|research preview", "Lancamento experimental pra um grupo testar antes da versao final. Pode mudar bastante."),
+    ("Descontinuado", r"\bdescontinua\w*|\bdeprecat\w*|\bobsolet\w*", "Ainda funciona, mas ja tem data pra ser desligado. Hora de trocar pelo substituto."),
+    ("Aposentado", r"\baposentad\w*|\bretired\b", "Ja foi desligado: pedidos pra ele dao erro."),
+    ("Cache de prompt", r"cache de prompt|prompt caching", "Reaproveita partes repetidas de um pedido na API (instrucoes longas, documentos), deixando mais barato e mais rapido."),
+    ("Batch API", r"\bBatch\b", "Manda muitos pedidos de uma vez pra API, sem pressa de resposta, pela metade do preco."),
+    ("Modo rapido", r"modo r[aá]pido|fast mode", "Modo que entrega as respostas mais rapido, cobrando mais caro por isso."),
+    ("Raciocinio", r"\bracioc[ií]nio\b|pensamento estendido|extended thinking|\bultrathink\b", "O Claude pensa passo a passo antes de responder. Demora mais, mas acerta mais em problemas dificeis."),
+    ("Ferramentas", r"\buso de ferramentas\b|\btool use\b", "Quando o Claude chama funcoes externas (buscar na web, rodar codigo, consultar um sistema) pra completar a tarefa."),
+    ("SDK", r"\bSDKs?\b", "Bibliotecas oficiais pra usar a API do Claude em Python, TypeScript e outras linguagens."),
+    ("CLAUDE.md", r"CLAUDE\.md", "Arquivo de regras do projeto no Claude Code. Ele e lido no comeco de toda conversa."),
+    ("Claude in Chrome", r"Claude in Chrome|Claude no Chrome", "Extensao do navegador que deixa o Claude ver e mexer nas paginas que voce esta usando."),
+    ("Cowork", r"\bCowork\b", "Modo do app de desktop do Claude em que ele trabalha como agente nos seus arquivos e tarefas do dia a dia, nao so em codigo."),
+    ("Nuvens parceiras", r"\bBedrock\b|\bVertex\b|\bFoundry\b", "Nuvens da Amazon (Bedrock), Google (Vertex) e Microsoft (Foundry), onde empresas tambem podem usar o Claude."),
+    ("Planos", r"\b(Pro|Max|Team|Enterprise)\b(?= (e|and|plan|plano|users|usu))|planos? (Pro|Max|Team|Enterprise)", "Planos pagos do Claude: Pro (individual), Max (uso pesado), Team (equipes) e Enterprise (empresas)."),
+]
+
+
+def destaque_grande(it):
+    nome, emoji, cor = CATS[it["cat"]]
+    resumo = it.get("resumo_pt") or it["resumo"] or " · ".join((it.get("topicos_pt") or it["topicos"])[:3])
+    return (f'<article class="hero-card card" data-cat="{it["cat"]}" data-busca="" style="--c:{cor}">'
+            f'<div class="topo"><span class="cat">{emoji} {nome}</span><time>{data_br(it["ts"])}</time></div>'
+            f'<h3><a href="{attr(it["url"])}" target="_blank" rel="noopener">{esc(it.get("titulo_pt") or it["titulo"])}</a></h3>'
+            f'<p>{esc(resumo[:260])}</p>'
+            f'<div class="acoes"><a class="btn ia" href="{attr(link_explica(it))}" target="_blank" rel="noopener">✨ Me explica</a>'
+            f'<a class="btn" href="{attr(it["url"])}" target="_blank" rel="noopener">\U0001F517 Fonte</a></div></article>')
 
 
 def gerar_pagina(estado, erros):
@@ -528,30 +593,64 @@ def gerar_pagina(estado, erros):
 
     agenda = sorted(estado["agenda"].values(), key=lambda a: a["ts"])
     ag = "".join(f'<li><b>{data_br(a["ts"])}</b> <em class="cd" data-ts="{a["ts"]}">{faltam(a["ts"])}</em>'
-                 f'<a href="{esc(a["url"])}" target="_blank" rel="noopener">{esc(a.get("titulo_pt") or a["titulo"])}</a>'
+                 f'<a href="{attr(a["url"])}" target="_blank" rel="noopener">{esc(a.get("titulo_pt") or a["titulo"])}</a>'
                  f'<small>{esc(a["origem"])}</small></li>' for a in agenda) or "<li class='apagado'>Nada marcado por enquanto.</li>"
     titulo_dica, texto_dica = dica_de_hoje()
     todas = "".join(f"<li><b>{esc(t)}</b> {esc(x)}</li>" for t, x in DICAS)
+    termos = "".join(f'<div class="termo-card"><b>{esc(n)}</b><p>{esc(d)}</p></div>' for n, _, d in GLOSSARIO)
+    sensiveis = {"Planos", "Console", "API", "SDK", "MCP", "Batch API", "Opus", "Sonnet", "Haiku", "Cowork"}
+    glossario_js = json.dumps([[n, r, d, "" if n in sensiveis else "i"] for n, r, d in GLOSSARIO], ensure_ascii=False)
     aviso_erro = f'<p class="erro">Nao consegui ler: {", ".join(erros)} (o resto esta atualizado)</p>' if erros else ""
+
+    # numeros do painel
+    dias = lambda n: AGORA - n * 86400
+    semana = sum(1 for i in itens if i["ts"] >= dias(7))
+    versoes = sum(1 for i in itens if i["cat"] == "code" and i["ts"] >= dias(30))
+    grandes = sum(1 for i in itens if i["cat"] == "destaque" and i["ts"] >= dias(90))
+    prox = agenda[0] if agenda else None
+    prox_txt = f'{data_br(prox["ts"])[:5]}<small>{faltam(prox["ts"])}</small>' if prox else "—<small>nada marcado</small>"
+    destaques = [i for i in itens if i["cat"] == "destaque" and i["ts"] >= dias(120)][:4]
+    hero = (f'<h2 class="titulo-sec">\U0001F6A8 Lancamentos grandes</h2><div class="hero">{"".join(destaque_grande(i) for i in destaques)}</div>'
+            if destaques else "")
 
     PAGINA.write_text(f"""<!doctype html><html lang="pt-br"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1"><title>Central do Claude</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23d97757'/%3E%3Cpath d='M32 10C34 25 39 30 54 32C39 34 34 39 32 54C30 39 25 34 10 32C25 30 30 25 32 10Z' fill='%23fff7f0'/%3E%3C/svg%3E">
 <style>
 body{{margin:0;font-family:Segoe UI,system-ui,sans-serif;background:#0d0b0a;color:#ece6e1}}
 body::before{{content:"";position:fixed;inset:-20%;z-index:-1;pointer-events:none;filter:blur(50px);
   background:radial-gradient(35% 30% at 15% 20%,#d977574d,transparent 70%),radial-gradient(30% 30% at 85% 15%,#a78bfa33,transparent 70%),
   radial-gradient(35% 35% at 60% 85%,#38bdf826,transparent 70%);animation:au 50s ease-in-out infinite alternate}}
+body::after{{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background-image:linear-gradient(#ffffff0d 1px,transparent 1px),linear-gradient(90deg,#ffffff0d 1px,transparent 1px);background-size:44px 44px;
+  -webkit-mask-image:radial-gradient(ellipse 90% 60% at 50% 0%,#000 25%,transparent 75%);mask-image:radial-gradient(ellipse 90% 60% at 50% 0%,#000 25%,transparent 75%)}}
 @keyframes au{{to{{transform:translate(4%,-3%) rotate(8deg) scale(1.06)}}}}
 @media (prefers-reduced-motion:reduce){{body::before{{animation:none}}}}
 a{{color:inherit}}
-header{{position:sticky;top:0;z-index:2;background:#14110fcc;backdrop-filter:blur(8px);padding:14px 24px;display:flex;gap:14px;align-items:center;border-bottom:1px solid #2b2420;flex-wrap:wrap}}
-header h1{{font-size:20px;margin:0}} header h1 b{{color:#d97757}} header small{{color:#9b8f86}}
-input{{margin-left:auto;background:#1a1613;border:1px solid #3a302a;color:#ece6e1;padding:8px 12px;border-radius:8px;width:260px}}
-.filtros{{padding:10px 24px;display:flex;gap:6px;flex-wrap:wrap}}
+header{{position:sticky;top:0;z-index:3;background:#14110fcc;backdrop-filter:blur(10px);padding:12px 24px;display:flex;gap:14px;align-items:center;border-bottom:1px solid #2b2420;flex-wrap:wrap}}
+.logo{{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,#f4a27c,#d97757 55%,#b4532f);display:grid;place-items:center;box-shadow:0 4px 16px #d9775766}}
+header h1{{font-size:20px;margin:0}} header h1 b{{color:#d97757}} header small{{color:#9b8f86;display:block;font-size:12px}}
+.busca{{margin-left:auto;display:flex;gap:8px}}
+input{{background:#1a1613;border:1px solid #3a302a;color:#ece6e1;padding:9px 12px;border-radius:10px;width:280px}}
+input:focus{{outline:none;border-color:#d97757}}
+.btn{{display:inline-flex;align-items:center;gap:4px;background:#221c18;border:1px solid #3a302a;color:#e2d8d0;padding:6px 11px;border-radius:999px;font-size:12px;text-decoration:none;cursor:pointer;transition:.15s}}
+.btn:hover{{border-color:#d97757;color:#fff}}
+.btn.ia{{background:linear-gradient(135deg,#d97757,#b4532f);border-color:transparent;color:#fff;font-weight:600}}
+.btn.ia:hover{{filter:brightness(1.12);box-shadow:0 4px 14px #d9775766}}
+#perguntar{{padding:9px 14px;font-size:13px;border-radius:10px}}
+.stats{{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;padding:16px 24px 4px}}
+.stat{{background:#18141199;border:1px solid #2f2722;border-radius:14px;padding:12px 16px}}
+.stat b{{font-size:28px;display:block;background:linear-gradient(135deg,#ffd2bd,#d97757);-webkit-background-clip:text;background-clip:text;color:transparent}}
+.stat b small{{font-size:13px;margin-left:6px;-webkit-text-fill-color:#fbbf24}} .stat span{{color:#9b8f86;font-size:12px}}
+.titulo-sec{{font-size:15px;margin:18px 24px 10px;color:#ece6e1}}
+.hero{{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px;padding:0 24px}}
+.hero-card{{background:radial-gradient(120% 120% at 0% 0%,color-mix(in srgb,var(--c) 28%,transparent),#18141199 60%)!important;border-radius:16px!important;padding:16px 18px!important}}
+.hero-card h3{{font-size:18px!important}}
+.filtros{{position:sticky;top:61px;z-index:2;background:#0d0b0ab8;backdrop-filter:blur(10px);padding:10px 24px;display:flex;gap:6px;flex-wrap:wrap;border-bottom:1px solid #2b2420;margin-top:14px}}
 .filtros button{{background:#1a1613;border:1px solid #3a302a;color:#d9d0c9;padding:5px 11px;border-radius:999px;cursor:pointer;font-size:13px}}
 .filtros button.on{{background:var(--c,#d97757);border-color:var(--c,#d97757);color:#111}} .filtros i{{font-style:normal;opacity:.7;font-size:11px}}
-.painel{{display:grid;grid-template-columns:1fr 1fr;gap:16px;padding:6px 24px 4px}}
-@media (max-width:800px){{.painel{{grid-template-columns:1fr}} input{{width:100%}}}}
+.painel{{display:grid;grid-template-columns:1fr 1fr;gap:14px;padding:14px 24px 0}}
+@media (max-width:900px){{.painel{{grid-template-columns:1fr}} .stats{{grid-template-columns:1fr 1fr}} input{{width:100%}} .busca{{width:100%}}}}
 .box{{background:#18141199;border:1px solid #2f2722;border-radius:14px;padding:14px 18px}}
 .box h2{{font-size:15px;margin:0 0 10px;color:#d97757}}
 .dica b{{display:block;font-size:17px;margin-bottom:6px}} .dica p{{margin:0;line-height:1.5;color:#d9d0c9}}
@@ -559,29 +658,52 @@ input{{margin-left:auto;background:#1a1613;border:1px solid #3a302a;color:#ece6e
 .agenda li{{display:grid;grid-template-columns:auto auto 1fr;gap:4px 10px;align-items:baseline;font-size:13px}}
 .agenda li a{{text-decoration:none}} .agenda li a:hover{{text-decoration:underline}} .agenda small{{grid-column:3;color:#7d726a;font-size:11px}}
 .cd{{font-style:normal;color:#fbbf24;font-size:12px}}
-.dia{{padding:4px 24px}} .dia h2{{font-size:15px;margin:18px 0 10px;color:#ece6e1}} .dia h2 span{{color:#9b8f86;font-weight:400}}
+.dia{{margin:0 24px 0 34px;padding:2px 0 8px 22px;border-left:2px solid #2f2722;position:relative}}
+.dia h2{{font-size:15px;margin:14px 0 10px;color:#ece6e1;position:relative}}
+.dia h2::before{{content:"";position:absolute;left:-30px;top:3px;width:12px;height:12px;border-radius:50%;background:#d97757;box-shadow:0 0 0 4px #d977572e}}
+.dia h2 span{{color:#9b8f86;font-weight:400}}
 .lista{{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:12px}}
-.card{{background:#18141199;border:1px solid #2f2722;border-left:3px solid var(--c);border-radius:12px;padding:12px 16px;transition:.15s}}
-.card:hover{{border-color:#4a3d35;border-left-color:var(--c);transform:translateY(-2px)}}
+.card{{background:#18141199;border:1px solid #2f2722;border-left:3px solid var(--c);border-radius:12px;padding:12px 16px;transition:.15s;display:flex;flex-direction:column}}
+.card:hover{{border-color:#4a3d35;border-left-color:var(--c);transform:translateY(-2px);box-shadow:0 10px 26px #0008}}
 .topo{{display:flex;gap:8px;align-items:center;font-size:12px}} .cat{{color:var(--c);font-weight:700}} time{{margin-left:auto;color:#9b8f86}}
 .novo{{background:#d97757;color:#111;font-weight:700;font-size:10px;padding:1px 6px;border-radius:4px;text-transform:uppercase}}
 .card h3{{font-size:15px;margin:8px 0 2px;line-height:1.35}} .card h3 a{{text-decoration:none}} .card h3 a:hover{{text-decoration:underline}}
 .orig{{color:#7d726a;font-size:11px}} .card p{{font-size:13px;color:#cfc5bd;line-height:1.45;margin:8px 0 0}}
 details{{margin-top:8px;font-size:13px;color:#cfc5bd}} summary{{cursor:pointer;color:#9b8f86}} ul{{margin:6px 0 0;padding-left:18px;line-height:1.45}}
+.acoes{{display:flex;gap:6px;flex-wrap:wrap;margin-top:auto;padding-top:12px}}
 .card p.info{{color:#9b8f86;font-size:12px;font-style:italic}} .apagado{{color:#7d726a}} .erro{{color:#f87171;padding:0 24px}}
-.todas{{padding:10px 24px 40px}} .todas li{{margin:6px 0;color:#cfc5bd}} .todas b{{color:#ece6e1}}
+.termo{{border-bottom:1px dashed #d97757aa;cursor:help}}
+#tip{{position:fixed;z-index:9;max-width:300px;background:#221b17f2;border:1px solid #d9775788;border-radius:10px;padding:10px 12px;font-size:12.5px;line-height:1.45;color:#e8dfd8;box-shadow:0 10px 30px #000a;pointer-events:none;display:none}}
+#tip b{{display:block;color:#f4a27c;margin-bottom:3px}}
+.extra{{padding:10px 24px 0}} .extra>summary{{font-size:15px;color:#ece6e1;padding:10px 0}}
+.termos{{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:10px}}
+.termo-card{{background:#18141199;border:1px solid #2f2722;border-radius:12px;padding:10px 14px}} .termo-card b{{color:#f4a27c}} .termo-card p{{margin:4px 0 0;color:#cfc5bd;line-height:1.45}}
+.todas li{{margin:6px 0;color:#cfc5bd}} .todas b{{color:#ece6e1}}
 #vazio{{display:none;color:#9b8f86;padding:30px 24px}}
+footer{{padding:30px 24px 40px;color:#6f655e;font-size:12px}}
 </style></head><body>
-<header><h1>Central do <b>Claude</b></h1><small>atualizado {datetime.now():%d/%m/%Y %H:%M} · {len(itens)} novidades guardadas</small>
-<input id="q" placeholder="Buscar (ex.: Opus, skills, preco...)"></header>
+<header><div class="logo"><svg width="20" height="20" viewBox="0 0 64 64"><path d="M32 4C35 24 40 29 60 32C40 35 35 40 32 60C29 40 24 35 4 32C24 29 29 24 32 4Z" fill="#fff7f0"/></svg></div>
+<h1>Central do <b>Claude</b><small>atualizado {datetime.now():%d/%m/%Y %H:%M} · {len(itens)} novidades guardadas</small></h1>
+<div class="busca"><input id="q" placeholder="Buscar nas novidades (ex.: Haiku, skills...)">
+<button id="perguntar" class="btn ia" title="Abre o Claude com a sua pergunta">✨ Perguntar ao Claude</button></div></header>
 {aviso_erro}
+<div class="stats">
+<div class="stat"><b>{semana}</b><span>novidades nos ultimos 7 dias</span></div>
+<div class="stat"><b>{versoes}</b><span>versoes do Claude Code em 30 dias</span></div>
+<div class="stat"><b>{grandes}</b><span>lancamentos grandes em 90 dias</span></div>
+<div class="stat"><b>{prox_txt}</b><span>proxima data da agenda</span></div>
+</div>
+{hero}
 <div class="painel">
 <div class="box dica"><h2>\U0001F4A1 Dica do dia</h2><b>{esc(titulo_dica)}</b><p>{esc(texto_dica)}</p></div>
 <div class="box agenda"><h2>\U0001F4C5 Agenda (o que vem por ai)</h2><ul>{ag}</ul></div>
 </div>
 <div class="filtros" id="filtros"><button class="on" data-cat="">Tudo <i>{len(itens)}</i></button>{filtros}</div>
-{"".join(linhas)}<p id="vazio">Nada encontrado.</p>
-<details class="todas"><summary>\U0001F4DA Todas as dicas ({len(DICAS)})</summary><ul>{todas}</ul></details>
+<div id="linha">{"".join(linhas)}</div><p id="vazio">Nada encontrado. Que tal clicar em "Perguntar ao Claude"?</p>
+<details class="extra"><summary>\U0001F4D6 Entenda os termos ({len(GLOSSARIO)})</summary><div class="termos">{termos}</div></details>
+<details class="extra todas"><summary>\U0001F4DA Todas as dicas ({len(DICAS)})</summary><ul>{todas}</ul></details>
+<footer>Passe o mouse nas palavras sublinhadas pra ver o que significam. "Me explica" abre o Claude com a pergunta pronta sobre a novidade.</footer>
+<div id="tip"></div>
 <script>
 let fCat='';
 function aplicar(){{
@@ -599,9 +721,42 @@ function aplicar(){{
 filtros.onclick=e=>{{const b=e.target.closest('button'); if(!b)return;
   filtros.querySelectorAll('button').forEach(x=>x.classList.remove('on')); b.classList.add('on'); fCat=b.dataset.cat; aplicar();}};
 q.oninput=aplicar;
+perguntar.onclick=()=>{{
+  const t=q.value.trim();
+  const p=t?'Sobre o Claude (o assistente de IA da Anthropic): '+t+'\\n\\nMe explica em portugues, de um jeito simples, com um exemplo pratico.'
+           :'Quais sao as novidades mais recentes do Claude e da Anthropic? Me explica em portugues o que mudou e como aproveitar.';
+  open('https://claude.ai/new?q='+encodeURIComponent(p),'_blank');
+}};
+q.onkeydown=e=>{{if(e.key==='Enter')perguntar.click()}};
 document.querySelectorAll('.cd').forEach(el=>{{
   const d=Math.round((new Date(el.dataset.ts*1000).setHours(0,0,0,0)-new Date().setHours(0,0,0,0))/864e5);
   el.textContent=d===0?'hoje':d===1?'amanha':d>1?'em '+d+' dias':'ja passou';
+}});
+// glossario: sublinha o primeiro aparecimento de cada termo em cada cartao
+const G={glossario_js}.map(([n,r,d,f])=>[n,new RegExp(r,f),d]);
+function marcar(card){{
+  const usados=new Set(), fila=[];
+  const w=document.createTreeWalker(card,NodeFilter.SHOW_TEXT,{{acceptNode:x=>x.parentElement.closest('.acoes,.topo,summary,.orig,.info,.termo')?2:1}});
+  while(w.nextNode())fila.push(w.currentNode);
+  while(fila.length){{
+    const no=fila.shift(); let melhor=null;
+    for(const [n,re,d] of G){{ if(usados.has(n))continue; const m=no.nodeValue.match(re);
+      if(m&&(!melhor||m.index<melhor.m.index))melhor={{n,d,m}}; }}
+    if(!melhor)continue;
+    usados.add(melhor.n);
+    const alvo=no.splitText(melhor.m.index), resto=alvo.splitText(melhor.m[0].length);
+    const s=document.createElement('span'); s.className='termo'; s.dataset.n=melhor.n; s.dataset.d=melhor.d;
+    alvo.replaceWith(s); s.appendChild(alvo); fila.unshift(no,resto);
+  }}
+}}
+document.querySelectorAll('.card').forEach(marcar);
+document.addEventListener('mouseover',e=>{{
+  const t=e.target.closest('.termo');
+  if(!t){{tip.style.display='none';return}}
+  tip.innerHTML='<b></b>'; tip.firstChild.textContent=t.dataset.n; tip.append(t.dataset.d);
+  const r=t.getBoundingClientRect(); tip.style.display='block';
+  tip.style.left=Math.min(r.left,innerWidth-320)+'px';
+  tip.style.top=(r.bottom+8+tip.offsetHeight>innerHeight?r.top-tip.offsetHeight-8:r.bottom+8)+'px';
 }});
 </script></body></html>""", encoding="utf-8")
 

@@ -6,3 +6,4 @@ central.html
 *.png
 __pycache__/
 _site/
+*.ico
