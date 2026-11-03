@@ -5624,12 +5624,12 @@
 "titulo": "Progress on provable inference for large language models",
 "url": "https://www.anthropic.com/research/provable-inference",
 "ts": 1793577600.0,
-"resumo": "Progress on provable inference for large language models",
+"resumo": "We have made progress on a type of cryptographic proof known as a “zkSNARK.” In this post, we share some of that progress, primarily through a system we call FlashProve.",
 "topicos": [],
 "info": "",
 "visto": 1793699880.9046893,
 "titulo_pt": "Progress on provable inference for large language models",
-"resumo_pt": "Progress on provable inference for large language models",
+"resumo_pt": "We have made progress on a type of cryptographic proof known as a “zkSNARK.” In this post, we share some of that progress, primarily through a system we call FlashProve.",
 "topicos_pt": [],
 "pt": false
 },
@@ -6281,5 +6281,5 @@
 "We announced the deprecation of the Claude Sonnet 4.5 model (claude-sonnet-4-5-20250929), with retirement on the Claude API scheduled for November 30, 2026.": "Anunciamos a descontinuação do modelo Claude Sonnet 4.5 (claude-sonnet-4-5-20250929), com descontinuação da API Claude prevista para 30 de novembro de 2026."
 },
 "lembrados": [],
-"dica_dia": "2026-11-02"
+"dica_dia": "2026-11-03"
 }
