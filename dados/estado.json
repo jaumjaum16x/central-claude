@@ -5617,6 +5617,36 @@
 "[Claude Tag] Changed newly pasted artifact links in Slack to show a simpler card with an Open button that opens the artifact in Claude, instead of Slack's side panel"
 ],
 "pt": false
+},
+"rss:https://www.anthropic.com/research/provable-inference": {
+"k": "rss:https://www.anthropic.com/research/provable-inference",
+"cat": "pesquisa",
+"titulo": "Progress on provable inference for large language models",
+"url": "https://www.anthropic.com/research/provable-inference",
+"ts": 1793577600.0,
+"resumo": "Progress on provable inference for large language models",
+"topicos": [],
+"info": "",
+"visto": 1793699880.9046893,
+"titulo_pt": "Progress on provable inference for large language models",
+"resumo_pt": "Progress on provable inference for large language models",
+"topicos_pt": [],
+"pt": false
+},
+"hn:50339494": {
+"k": "hn:50339494",
+"cat": "comunidade",
+"titulo": "Anthropic's internal AI use, at retail prices, now exceeds its employee pay",
+"url": "https://www.businessinsider.com/anthropic-claude-internal-ai-use-exceeds-employee-pay-tokens-2026-11",
+"ts": 1793637629,
+"resumo": "",
+"topicos": [],
+"info": "325 pontos e 249 comentario(s) no Hacker News",
+"visto": 1793699880.9046893,
+"titulo_pt": "Anthropic's internal AI use, at retail prices, now exceeds its employee pay",
+"resumo_pt": "",
+"topicos_pt": [],
+"pt": false
 }
 },
 "agenda": {
