@@ -5528,18 +5528,18 @@
 "titulo_pt": "Claude Code v2.1.317",
 "resumo_pt": "",
 "topicos_pt": [
-"Added a warning to /schedule when a new cloud scheduled task gets connectors you did not ask for, with how to remove them",
-"Added a check that asks before a web or shell tool call sends your account email address to the network",
-"Added onFailure: \"block\" for Agent SDK hook callbacks, so a callback that fails blocks the action instead of letting it run",
-"Added a notice in Claude Desktop's Code tab when your organization's remote managed settings haven't loaded for the session, and another once they do",
-"Added a notice when auto mode's check has no answer for a subagent's tool call, which used to leave nothing in the main view",
-"Added anthropic.plan, anthropic.seat_type, anthropic.provider and anthropic.custom_base_url to OTel metrics, events and spans",
-"Added a cost report to the Claude apps gateway admin API, GET /v1/organizations/analytics/cost, for reading past spend over a date range in total, per developer, per day or per IdP group",
-"Added a daily record of each developer's IdP groups on Claude apps gateways with admin: set, kept for admin.identity_retention_days, which the cost report groups by",
-"Added CLAUDE_CODE_DISABLE_NESTED_SESSION_ID: set it to 1 on a self-hosted runner to have claude -p run inside a session use that session's ID and transcript, as in earlier versions",
-"Fixed project and local MCP servers disconnecting after the first turn in some Claude desktop sessions",
-"Fixed auto mode failing every turn when an LLM gateway set as the base URL answers 403 or 422 to its server-side safety check (a 403 with an apiKeyHelper is unchanged)",
-"Fixed claude auth status exiting before a slow token refresh was saved, which could sign you out on the next run",
+"Adicionado um aviso a /schedule quando uma nova tarefa agendada na nuvem recebe conectores que você não solicitou, explicando como removê-los",
+"Adicionada uma verificação que pergunta antes que uma chamada de ferramenta web ou shell envie o endereço de e-mail da sua conta para a rede",
+"Adicionado onFailure: \"block\" para retornos de chamada de gancho do Agent SDK, para que um retorno de chamada que falhe bloqueie a ação em vez de deixá-la ser executada",
+"Adicionado um aviso na guia Código do Claude Desktop quando as configurações gerenciadas remotamente da sua organização não foram carregadas para a sessão, e outro quando isso acontecer",
+"Adicionado um aviso quando a verificação do modo automático não responde à chamada de ferramenta de um subagente, que não deixava nada na visualização principal",
+"Adicionados anthropic.plan, anthropic.seat_type, anthropic.provider e anthropic.custom_base_url às métricas, eventos e períodos do OTel",
+"Adicionado um relatório de custos à API de administração do gateway de aplicativos Claude, GET /v1/organizations/analytics/cost, para leitura de gastos anteriores em um intervalo de datas no total, por desenvolvedor, por dia ou por grupo de IdP",
+"Adicionado um registro diário dos grupos IdP de cada desenvolvedor nos gateways de aplicativos Claude com admin: set, mantido por admin.identity_retention_days, pelo qual o relatório de custos agrupa",
+"Adicionado CLAUDE_CODE_DISABLE_NESTED_SESSION_ID: defina-o como 1 em um executor auto-hospedado para que claude -p seja executado dentro de uma sessão, use o ID e a transcrição dessa sessão, como em versões anteriores",
+"Foi corrigido um problema de desconexão de servidores MCP locais e de projeto após o primeiro turno em algumas sessões de desktop do Claude.",
+"Foi corrigida a falha do modo automático a cada turno quando um gateway LLM definido como URL base responde 403 ou 422 à verificação de segurança do lado do servidor (um 403 com um apiKeyHelper permanece inalterado)",
+"Corrigida a saída do status de autenticação da claude antes que uma atualização lenta do token fosse salva, o que poderia desconectar você na próxima execução",
 "Fixed a project's effortLevel setting being ignored by sessions that an app starts ahead of time and then opens in the project, such as new sessions in the desktop app's Code tab",
 "Fixed claude --from-pr reporting \"No conversations found\" in projects with many sessions when the linked session was older than the first page",
 "Fixed the second of two simultaneous permission prompts showing no file path or command on claude.ai and the mobile apps",
@@ -5616,7 +5616,7 @@
 "[Remote Control] Fixed the next message to an idle session going unanswered after you restart claude remote-control, when you sent it within a minute of your previous message",
 "[Claude Tag] Changed newly pasted artifact links in Slack to show a simpler card with an Open button that opens the artifact in Claude, instead of Slack's side panel"
 ],
-"pt": false
+"pt": true
 },
 "rss:https://www.anthropic.com/research/provable-inference": {
 "k": "rss:https://www.anthropic.com/research/provable-inference",
@@ -5628,10 +5628,10 @@
 "topicos": [],
 "info": "",
 "visto": 1793699880.9046893,
-"titulo_pt": "Progress on provable inference for large language models",
-"resumo_pt": "We have made progress on a type of cryptographic proof known as a “zkSNARK.” In this post, we share some of that progress, primarily through a system we call FlashProve.",
+"titulo_pt": "Progresso na inferência comprovável para grandes modelos de linguagem",
+"resumo_pt": "Fizemos progressos num tipo de prova criptográfica conhecida como “zkSNARK”. Neste post, compartilhamos alguns desses progressos, principalmente através de um sistema que chamamos de FlashProve.",
 "topicos_pt": [],
-"pt": false
+"pt": true
 },
 "hn:50339494": {
 "k": "hn:50339494",
@@ -5643,10 +5643,25 @@
 "topicos": [],
 "info": "325 pontos e 249 comentario(s) no Hacker News",
 "visto": 1793699880.9046893,
-"titulo_pt": "Anthropic's internal AI use, at retail prices, now exceeds its employee pay",
+"titulo_pt": "O uso interno de IA da Anthropic, a preços de varejo, agora excede o salário dos funcionários",
 "resumo_pt": "",
 "topicos_pt": [],
-"pt": false
+"pt": true
+},
+"api:November 3, 2026": {
+"k": "api:November 3, 2026",
+"cat": "api",
+"titulo": "Text generated by Claude Mythos 5, Claude Opus 4.7, and Claude Sonnet 4.6 carries Anthropic’s text watermark on the platforms listed in How Claude marks AI-generated content.",
+"url": "https://platform.claude.com/docs/en/release-notes/overview",
+"ts": 1793674800.0,
+"resumo": "On Claude Sonnet 4.6, text generated for a request that sets temperature, top_p, or top_k to a non-default value might not carry it. See Text watermark.",
+"topicos": [],
+"info": "",
+"visto": 1793749010.8170896,
+"titulo_pt": "O texto gerado por Claude Mythos 5, Claude Opus 4.7 e Claude Sonnet 4.6 carrega a marca d’água de texto do Anthropic nas plataformas listadas em Como Claude marca o conteúdo gerado por IA.",
+"resumo_pt": "No Claude Sonnet 4.6, o texto gerado para uma solicitação que define temperatura, top_p ou top_k como um valor não padrão pode não ser compatível. Consulte Marca d'água de texto.",
+"topicos_pt": [],
+"pt": true
 }
 },
 "agenda": {
@@ -6278,7 +6293,25 @@
 "New in the Messages API, send your conversation once, and the API receives only what’s new with every turn.": "Novidade na API de mensagens, envie sua conversa uma vez e a API receberá apenas as novidades a cada turno.",
 "Long conversations and agent loops on the Messages API can now send smaller requests and get a lower time to first token with message threads, in beta with the message-threads-2026-08-12 beta header.": "Conversas longas e loops de agente na API de mensagens agora podem enviar solicitações menores e obter um tempo menor para o primeiro token com threads de mensagens, em beta com o cabeçalho message-threads-2026-08-12 beta.",
 "The API keeps the conversation on the server, so each later request sends only the new messages. A thread expires 5 minutes after its last request and is deleted no more than 1 hour after its last use. Message threads are available on the Claude API, Claude Platform on AWS, Claude Models on Google Cloud (Anthropic managed), and Claude in Microsoft Foundry.": "A API mantém a conversa no servidor, para que cada solicitação posterior envie apenas as novas mensagens. Um thread expira 5 minutos após sua última solicitação e é excluído no máximo 1 hora após seu último uso. Os tópicos de mensagens estão disponíveis na API Claude, Claude Platform na AWS, Claude Models no Google Cloud (gerenciado pelo Anthropic) e Claude no Microsoft Foundry.",
-"We announced the deprecation of the Claude Sonnet 4.5 model (claude-sonnet-4-5-20250929), with retirement on the Claude API scheduled for November 30, 2026.": "Anunciamos a descontinuação do modelo Claude Sonnet 4.5 (claude-sonnet-4-5-20250929), com descontinuação da API Claude prevista para 30 de novembro de 2026."
+"We announced the deprecation of the Claude Sonnet 4.5 model (claude-sonnet-4-5-20250929), with retirement on the Claude API scheduled for November 30, 2026.": "Anunciamos a descontinuação do modelo Claude Sonnet 4.5 (claude-sonnet-4-5-20250929), com descontinuação da API Claude prevista para 30 de novembro de 2026.",
+"Claude Code v2.1.317": "Claude Code v2.1.317",
+"Added a warning to /schedule when a new cloud scheduled task gets connectors you did not ask for, with how to remove them": "Adicionado um aviso a /schedule quando uma nova tarefa agendada na nuvem recebe conectores que você não solicitou, explicando como removê-los",
+"Added a check that asks before a web or shell tool call sends your account email address to the network": "Adicionada uma verificação que pergunta antes que uma chamada de ferramenta web ou shell envie o endereço de e-mail da sua conta para a rede",
+"Added onFailure: \"block\" for Agent SDK hook callbacks, so a callback that fails blocks the action instead of letting it run": "Adicionado onFailure: \"block\" para retornos de chamada de gancho do Agent SDK, para que um retorno de chamada que falhe bloqueie a ação em vez de deixá-la ser executada",
+"Added a notice in Claude Desktop's Code tab when your organization's remote managed settings haven't loaded for the session, and another once they do": "Adicionado um aviso na guia Código do Claude Desktop quando as configurações gerenciadas remotamente da sua organização não foram carregadas para a sessão, e outro quando isso acontecer",
+"Added a notice when auto mode's check has no answer for a subagent's tool call, which used to leave nothing in the main view": "Adicionado um aviso quando a verificação do modo automático não responde à chamada de ferramenta de um subagente, que não deixava nada na visualização principal",
+"Added anthropic.plan, anthropic.seat_type, anthropic.provider and anthropic.custom_base_url to OTel metrics, events and spans": "Adicionados anthropic.plan, anthropic.seat_type, anthropic.provider e anthropic.custom_base_url às métricas, eventos e períodos do OTel",
+"Added a cost report to the Claude apps gateway admin API, GET /v1/organizations/analytics/cost, for reading past spend over a date range in total, per developer, per day or per IdP group": "Adicionado um relatório de custos à API de administração do gateway de aplicativos Claude, GET /v1/organizations/analytics/cost, para leitura de gastos anteriores em um intervalo de datas no total, por desenvolvedor, por dia ou por grupo de IdP",
+"Added a daily record of each developer's IdP groups on Claude apps gateways with admin: set, kept for admin.identity_retention_days, which the cost report groups by": "Adicionado um registro diário dos grupos IdP de cada desenvolvedor nos gateways de aplicativos Claude com admin: set, mantido por admin.identity_retention_days, pelo qual o relatório de custos agrupa",
+"Added CLAUDE_CODE_DISABLE_NESTED_SESSION_ID: set it to 1 on a self-hosted runner to have claude -p run inside a session use that session's ID and transcript, as in earlier versions": "Adicionado CLAUDE_CODE_DISABLE_NESTED_SESSION_ID: defina-o como 1 em um executor auto-hospedado para que claude -p seja executado dentro de uma sessão, use o ID e a transcrição dessa sessão, como em versões anteriores",
+"Fixed project and local MCP servers disconnecting after the first turn in some Claude desktop sessions": "Foi corrigido um problema de desconexão de servidores MCP locais e de projeto após o primeiro turno em algumas sessões de desktop do Claude.",
+"Fixed auto mode failing every turn when an LLM gateway set as the base URL answers 403 or 422 to its server-side safety check (a 403 with an apiKeyHelper is unchanged)": "Foi corrigida a falha do modo automático a cada turno quando um gateway LLM definido como URL base responde 403 ou 422 à verificação de segurança do lado do servidor (um 403 com um apiKeyHelper permanece inalterado)",
+"Fixed claude auth status exiting before a slow token refresh was saved, which could sign you out on the next run": "Corrigida a saída do status de autenticação da claude antes que uma atualização lenta do token fosse salva, o que poderia desconectar você na próxima execução",
+"Progress on provable inference for large language models": "Progresso na inferência comprovável para grandes modelos de linguagem",
+"We have made progress on a type of cryptographic proof known as a “zkSNARK.” In this post, we share some of that progress, primarily through a system we call FlashProve.": "Fizemos progressos num tipo de prova criptográfica conhecida como “zkSNARK”. Neste post, compartilhamos alguns desses progressos, principalmente através de um sistema que chamamos de FlashProve.",
+"Anthropic's internal AI use, at retail prices, now exceeds its employee pay": "O uso interno de IA da Anthropic, a preços de varejo, agora excede o salário dos funcionários",
+"Text generated by Claude Mythos 5, Claude Opus 4.7, and Claude Sonnet 4.6 carries Anthropic’s text watermark on the platforms listed in How Claude marks AI-generated content.": "O texto gerado por Claude Mythos 5, Claude Opus 4.7 e Claude Sonnet 4.6 carrega a marca d’água de texto do Anthropic nas plataformas listadas em Como Claude marca o conteúdo gerado por IA.",
+"On Claude Sonnet 4.6, text generated for a request that sets temperature, top_p, or top_k to a non-default value might not carry it. See Text watermark.": "No Claude Sonnet 4.6, o texto gerado para uma solicitação que define temperatura, top_p ou top_k como um valor não padrão pode não ser compatível. Consulte Marca d'água de texto."
 },
 "lembrados": [],
 "dica_dia": "2026-11-03"
