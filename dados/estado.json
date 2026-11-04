@@ -5847,6 +5847,36 @@
 "[Code Review] Improved the Code Review analytics page to retry once after a server or network failure, then show a Try again banner instead of empty cards"
 ],
 "pt": false
+},
+"rss:https://claude.com/resources/articles/new-agents-and-products-claude-marketplace": {
+"k": "rss:https://claude.com/resources/articles/new-agents-and-products-claude-marketplace",
+"cat": "blog",
+"titulo": "New agents and products for security, productivity, and creative work on Claude Marketplace",
+"url": "https://claude.com/resources/articles/new-agents-and-products-claude-marketplace",
+"ts": 1793750400.0,
+"resumo": "New agents and products for security, productivity, and creative work on Claude Marketplace",
+"topicos": [],
+"info": "",
+"visto": 1793829959.1559906,
+"titulo_pt": "New agents and products for security, productivity, and creative work on Claude Marketplace",
+"resumo_pt": "New agents and products for security, productivity, and creative work on Claude Marketplace",
+"topicos_pt": [],
+"pt": false
+},
+"rss:https://www.anthropic.com/research/investigating-vault-particles-with-claude": {
+"k": "rss:https://www.anthropic.com/research/investigating-vault-particles-with-claude",
+"cat": "pesquisa",
+"titulo": "Investigating vault particles with Claude",
+"url": "https://www.anthropic.com/research/investigating-vault-particles-with-claude",
+"ts": 1793750400.0,
+"resumo": "We’re sharing another finding from Anthropic’s biology research lab: the first 3D structure of a vault particle found in prokaryotic cells. Here, we describe how Claude helped at each step of this research.",
+"topicos": [],
+"info": "",
+"visto": 1793829959.1559906,
+"titulo_pt": "Investigating vault particles with Claude",
+"resumo_pt": "We’re sharing another finding from Anthropic’s biology research lab: the first 3D structure of a vault particle found in prokaryotic cells. Here, we describe how Claude helped at each step of this research.",
+"topicos_pt": [],
+"pt": false
 }
 },
 "agenda": {
