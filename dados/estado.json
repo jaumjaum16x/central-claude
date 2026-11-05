@@ -2629,13 +2629,13 @@
 "Reduzimos o preço das leituras imediatas de cache no Claude Sonnet 5.5 de US$ 0,20 para US$ 0,10 por milhão de tokens: 0,05x o preço base de entrada em vez de 0,1x. As gravações em cache e todos os outros preços permanecem inalterados. Consulte Preços de cache imediato.",
 "Lançamos o Claude Haiku 5.5 (claude-haiku-5-5), nosso modelo mais capaz, ajustado para trabalhos de alto volume e sensíveis à latência. Ele tem uma janela de contexto de token de 1 milhão, tokens de saída máximos de 128 mil e pensamento adaptativo com o parâmetro de esforço. Está disponível na API Claude, Claude no Amazon Bedrock, Claude Platform na AWS, Claude no Google Cloud e Claude no Microsoft Foundry. Veja O que há de novo no Claude Haiku 5.5.",
 "O código escrito para Claude Haiku 4.5 pode falhar no Claude Haiku 5.5. O pensamento estendido manual (budget_tokens), os parâmetros de amostragem temperatura, top_p e top_k e o pré-preenchimento da mensagem do assistente podem retornar, cada um, um erro 400. computer_20250124 também retorna um erro 400: use o conjunto de ferramentas computer_toolset_20260801 na API Claude e no Google Cloud ou computer_20251124 no Amazon Bedrock. Uma solicitação que envia blocos de pensamento de volta após uma alteração no sistema, nas ferramentas ou em turnos anteriores também pode retornar um erro 400. O pensamento adaptativo está ativado por padrão, portanto, uma resposta pode começar com blocos de pensamento e seu texto é omitido, a menos que você defina thinking.display como \"resumido\". O mesmo texto também conta como mais tokens. Consulte o guia de migração para cada alteração. Para padrões de prompt específicos do modelo, consulte Solicitando Claude Haiku 5.5.",
-"Python SDK 1.12.0 and TypeScript SDK 0.132.0 add classes, in beta, for the browser use tool and the computer use tool. You subclass one and write one method per tool against your own browser or desktop automation. The SDK runs the tool loop, the URL and file policies you set for the browser, and your approval callback. See Browser and computer use with the SDK toolsets.",
+"Python SDK 1.12.0 e TypeScript SDK 0.132.0 adicionam classes, em beta, para a ferramenta de uso do navegador e a ferramenta de uso do computador. Você subclassifica um e escreve um método por ferramenta em seu próprio navegador ou automação de desktop. O SDK executa o loop de ferramentas, o URL e as políticas de arquivo que você define para o navegador e seu retorno de chamada de aprovação. Consulte Uso do navegador e do computador com os conjuntos de ferramentas do SDK.",
 "Os planos Claude Max, Ultra e Team agora incluem créditos API mensais. Para saber como reivindicá-los, consulte Créditos de API para planos Max, Ultra e Team.",
 "No Claude Managed Agents, um ambiente de nuvem com rede limitada agora também aplica seus hosts permitidos às ferramentas web_search e web_fetch. Uma chamada web_fetch para um URL em um host que não corresponde a enabled_hosts retorna um resultado de erro url_not_allowed para o agente. web_search omite resultados de tais hosts. Quando Allow_hosts não lista nenhum host, nenhuma das ferramentas retorna uma página ou um resultado de pesquisa. Allow_package_managers e Allow_mcp_servers não adicionam hosts para essas ferramentas. Para permitir que as ferramentas cheguem a um host, adicione-o a enabled_hosts, que também o abre na sandbox. redes irrestritas e ambientes auto-hospedados não limitam essas ferramentas. Consulte Rede de ambiente.",
 "Com rede limitada, a criação de uma sessão falha com um erro 400 quando os Allow_Domains de uma ferramenta da Web habilitada têm uma entrada que não está dentro de Allow_hosts. O mesmo acontece com uma atualização de sessão que adiciona tal entrada. Uma entrada Allow_Hosts corresponde a um host exato, a menos que comece com *., portanto, docs.example.com não está dentro de [\"example.com\"]. Para corrigir o erro, adicione o host a Allow_hosts ou remova a entrada de Allow_domains. Consulte Restringir domínios de pesquisa e busca na Web.",
 "Nos Claude Managed Agents, a ferramenta web_fetch agora busca apenas URLs que já apareceram na sessão, por exemplo, no texto de uma mensagem do usuário, em um resultado de web_search ou em uma página que o web_fetch retornou anteriormente. Isso reduz o risco de exfiltração de dados. Uma URL que aparece apenas na saída do próprio Claude, no prompt do sistema do agente, em um documento anexado ou na saída de uma ferramenta como bash, read ou uma ferramenta MCP não conta: uma chamada web_fetch para ela retorna um resultado de erro url_not_in_prior_context para o agente. Para permitir que o agente busque uma URL, envie-a no texto de um evento user.message."
 ],
-"pt": false
+"pt": true
 },
 "app:October 7, 2026Claude Haiku 5.5 launch": {
 "k": "app:October 7, 2026Claude Haiku 5.5 launch",
@@ -5761,18 +5761,18 @@
 "titulo_pt": "Claude Code v2.1.318",
 "resumo_pt": "",
 "topicos_pt": [
-"Added a record of your answer when Claude Code asks to turn on the mods it writes in a session",
-"Added assume_role on mantle upstreams of the Claude apps gateway, for a role in another AWS account and for per-developer AWS cost attribution",
-"Added an effort option to a mod's $.model.fork, so a quick side job can run at low whatever effort the session uses; the result reports the effort sent",
-"Added the date a stored claude.ai sign-in ends to claude auth status (loginExpiresAt) and to claude -p JSON results (credential_expires_at)",
-"Added a one-line stderr warning to claude -p text output, starting 10 days before a stored claude.ai sign-in ends",
-"Fixed --continue sometimes losing the earlier conversation after a malformed tool call's retries ran out (regression in 2.1.314)",
-"Fixed macOS sessions with many running Bash commands stalling while memory grew",
-"Fixed permission prompts being answered by keys typed just after sending a message, or before a slow prompt appeared",
-"Fixed /logout, claude auth logout and claude mcp remove reporting success, and changes to trust, consent or MCP settings being dropped with no word, when the config file could not be updated on a shared network home directory",
-"Fixed jobs exiting with Not logged in when another terminal or host signs in again to the same account and organization on the same home",
-"Fixed claude mcp add and remove writing the config without its lock: they now wait for it or exit 1, though another job's save can still replace a saved server",
-"Fixed claude plugin commands exiting before a slow token refresh was saved, which could sign you out on the next run",
+"Adicionado um registro da sua resposta quando Claude Code pede para ativar os mods que escreve em uma sessão",
+"Adicionado assume_role nos upstreams do manto do gateway de aplicativos Claude, para uma função em outra conta da AWS e para atribuição de custos da AWS por desenvolvedor",
+"Adicionada uma opção de esforço ao $.model.fork de um mod, para que um trabalho paralelo rápido possa ser executado com pouco esforço, qualquer que seja o esforço usado pela sessão; o resultado relata o esforço enviado",
+"Adicionada a data em que uma entrada claude.ai armazenada termina ao status de autenticação claude (loginExpiresAt) e aos resultados JSON claude -p (credential_expires_at)",
+"Adicionado um aviso stderr de uma linha à saída de texto claude -p, começando 10 dias antes do término de uma entrada claude.ai armazenada",
+"Corrigido --continue às vezes perdendo a conversa anterior após o término das novas tentativas de uma chamada de ferramenta malformada (regressão em 2.1.314)",
+"Corrigidas sessões do macOS com muitos comandos Bash em execução paralisando enquanto a memória aumentava",
+"Corrigidos prompts de permissão sendo respondidos por teclas digitadas logo após o envio de uma mensagem ou antes de um prompt lento aparecer",
+"Correção de /logout, claude auth logout e claude mcp removem relatórios de sucesso e alterações nas configurações de confiança, consentimento ou MCP sendo descartadas sem nenhuma palavra, quando o arquivo de configuração não pode ser atualizado em um diretório inicial de rede compartilhada",
+"Foram corrigidos trabalhos que saíam com Não conectado quando outro terminal ou host entra novamente na mesma conta e organização na mesma página inicial",
+"Corrigida a adição e remoção de claude mcp gravando a configuração sem seu bloqueio: eles agora esperam por isso ou saem 1, embora o salvamento de outro trabalho ainda possa substituir um servidor salvo",
+"Corrigidos os comandos do plug-in claude que saíam antes de uma atualização lenta do token ser salva, o que poderia desconectar você na próxima execução",
 "Fixed claude plugin validate passing a custom-named marketplace file that claude plugin marketplace add rejects",
 "Fixed stdio MCP servers that exit on the version probe being re-probed on every start; a server that dies in under 3s for its own reason is also pinned to the legacy handshake for 7 days",
 "Fixed sessions being refused at startup by an allowedProviders list that another login on the same machine had stored",
@@ -5846,7 +5846,7 @@
 "[Claude Tag] Fixed keyboard focus and screen reader announcements in Claude Tag admin setup; pressing Escape in the connect form no longer also closes the Add dialog",
 "[Code Review] Improved the Code Review analytics page to retry once after a server or network failure, then show a Try again banner instead of empty cards"
 ],
-"pt": false
+"pt": true
 },
 "rss:https://claude.com/resources/articles/new-agents-and-products-claude-marketplace": {
 "k": "rss:https://claude.com/resources/articles/new-agents-and-products-claude-marketplace",
@@ -5858,10 +5858,10 @@
 "topicos": [],
 "info": "",
 "visto": 1793829959.1559906,
-"titulo_pt": "New agents and products for security, productivity, and creative work on Claude Marketplace",
-"resumo_pt": "New agents and products for security, productivity, and creative work on Claude Marketplace",
+"titulo_pt": "Novos agentes e produtos para segurança, produtividade e trabalho criativo no Claude Marketplace",
+"resumo_pt": "Novos agentes e produtos para segurança, produtividade e trabalho criativo no Claude Marketplace",
 "topicos_pt": [],
-"pt": false
+"pt": true
 },
 "rss:https://www.anthropic.com/research/investigating-vault-particles-with-claude": {
 "k": "rss:https://www.anthropic.com/research/investigating-vault-particles-with-claude",
@@ -5873,10 +5873,10 @@
 "topicos": [],
 "info": "",
 "visto": 1793829959.1559906,
-"titulo_pt": "Investigating vault particles with Claude",
-"resumo_pt": "We’re sharing another finding from Anthropic’s biology research lab: the first 3D structure of a vault particle found in prokaryotic cells. Here, we describe how Claude helped at each step of this research.",
+"titulo_pt": "Investigando partículas do cofre com Claude",
+"resumo_pt": "Estamos compartilhando outra descoberta do laboratório de pesquisa biológica do Anthropic: a primeira estrutura 3D de uma partícula em forma de abóbada encontrada em células procarióticas. Aqui descrevemos como Claude ajudou em cada etapa desta pesquisa.",
 "topicos_pt": [],
-"pt": false
+"pt": true
 }
 },
 "agenda": {
@@ -6525,7 +6525,24 @@
 "We have made progress on a type of cryptographic proof known as a “zkSNARK.” In this post, we share some of that progress, primarily through a system we call FlashProve.": "Fizemos progressos num tipo de prova criptográfica conhecida como “zkSNARK”. Neste post, compartilhamos alguns desses progressos, principalmente através de um sistema que chamamos de FlashProve.",
 "Anthropic's internal AI use, at retail prices, now exceeds its employee pay": "O uso interno de IA da Anthropic, a preços de varejo, agora excede o salário dos funcionários",
 "Text generated by Claude Mythos 5, Claude Opus 4.7, and Claude Sonnet 4.6 carries Anthropic’s text watermark on the platforms listed in How Claude marks AI-generated content.": "O texto gerado por Claude Mythos 5, Claude Opus 4.7 e Claude Sonnet 4.6 carrega a marca d’água de texto do Anthropic nas plataformas listadas em Como Claude marca o conteúdo gerado por IA.",
-"On Claude Sonnet 4.6, text generated for a request that sets temperature, top_p, or top_k to a non-default value might not carry it. See Text watermark.": "No Claude Sonnet 4.6, o texto gerado para uma solicitação que define temperatura, top_p ou top_k como um valor não padrão pode não ser compatível. Consulte Marca d'água de texto."
+"On Claude Sonnet 4.6, text generated for a request that sets temperature, top_p, or top_k to a non-default value might not carry it. See Text watermark.": "No Claude Sonnet 4.6, o texto gerado para uma solicitação que define temperatura, top_p ou top_k como um valor não padrão pode não ser compatível. Consulte Marca d'água de texto.",
+"Python SDK 1.12.0 and TypeScript SDK 0.132.0 add classes, in beta, for the browser use tool and the computer use tool. You subclass one and write one method per tool against your own browser or desktop automation. The SDK runs the tool loop, the URL and file policies you set for the browser, and your approval callback. See Browser and computer use with the SDK toolsets.": "Python SDK 1.12.0 e TypeScript SDK 0.132.0 adicionam classes, em beta, para a ferramenta de uso do navegador e a ferramenta de uso do computador. Você subclassifica um e escreve um método por ferramenta em seu próprio navegador ou automação de desktop. O SDK executa o loop de ferramentas, o URL e as políticas de arquivo que você define para o navegador e seu retorno de chamada de aprovação. Consulte Uso do navegador e do computador com os conjuntos de ferramentas do SDK.",
+"Claude Code v2.1.318": "Claude Code v2.1.318",
+"Added a record of your answer when Claude Code asks to turn on the mods it writes in a session": "Adicionado um registro da sua resposta quando Claude Code pede para ativar os mods que escreve em uma sessão",
+"Added assume_role on mantle upstreams of the Claude apps gateway, for a role in another AWS account and for per-developer AWS cost attribution": "Adicionado assume_role nos upstreams do manto do gateway de aplicativos Claude, para uma função em outra conta da AWS e para atribuição de custos da AWS por desenvolvedor",
+"Added an effort option to a mod's $.model.fork, so a quick side job can run at low whatever effort the session uses; the result reports the effort sent": "Adicionada uma opção de esforço ao $.model.fork de um mod, para que um trabalho paralelo rápido possa ser executado com pouco esforço, qualquer que seja o esforço usado pela sessão; o resultado relata o esforço enviado",
+"Added the date a stored claude.ai sign-in ends to claude auth status (loginExpiresAt) and to claude -p JSON results (credential_expires_at)": "Adicionada a data em que uma entrada claude.ai armazenada termina ao status de autenticação claude (loginExpiresAt) e aos resultados JSON claude -p (credential_expires_at)",
+"Added a one-line stderr warning to claude -p text output, starting 10 days before a stored claude.ai sign-in ends": "Adicionado um aviso stderr de uma linha à saída de texto claude -p, começando 10 dias antes do término de uma entrada claude.ai armazenada",
+"Fixed --continue sometimes losing the earlier conversation after a malformed tool call's retries ran out (regression in 2.1.314)": "Corrigido --continue às vezes perdendo a conversa anterior após o término das novas tentativas de uma chamada de ferramenta malformada (regressão em 2.1.314)",
+"Fixed macOS sessions with many running Bash commands stalling while memory grew": "Corrigidas sessões do macOS com muitos comandos Bash em execução paralisando enquanto a memória aumentava",
+"Fixed permission prompts being answered by keys typed just after sending a message, or before a slow prompt appeared": "Corrigidos prompts de permissão sendo respondidos por teclas digitadas logo após o envio de uma mensagem ou antes de um prompt lento aparecer",
+"Fixed /logout, claude auth logout and claude mcp remove reporting success, and changes to trust, consent or MCP settings being dropped with no word, when the config file could not be updated on a shared network home directory": "Correção de /logout, claude auth logout e claude mcp removem relatórios de sucesso e alterações nas configurações de confiança, consentimento ou MCP sendo descartadas sem nenhuma palavra, quando o arquivo de configuração não pode ser atualizado em um diretório inicial de rede compartilhada",
+"Fixed jobs exiting with Not logged in when another terminal or host signs in again to the same account and organization on the same home": "Foram corrigidos trabalhos que saíam com Não conectado quando outro terminal ou host entra novamente na mesma conta e organização na mesma página inicial",
+"Fixed claude mcp add and remove writing the config without its lock: they now wait for it or exit 1, though another job's save can still replace a saved server": "Corrigida a adição e remoção de claude mcp gravando a configuração sem seu bloqueio: eles agora esperam por isso ou saem 1, embora o salvamento de outro trabalho ainda possa substituir um servidor salvo",
+"Fixed claude plugin commands exiting before a slow token refresh was saved, which could sign you out on the next run": "Corrigidos os comandos do plug-in claude que saíam antes de uma atualização lenta do token ser salva, o que poderia desconectar você na próxima execução",
+"New agents and products for security, productivity, and creative work on Claude Marketplace": "Novos agentes e produtos para segurança, produtividade e trabalho criativo no Claude Marketplace",
+"Investigating vault particles with Claude": "Investigando partículas do cofre com Claude",
+"We’re sharing another finding from Anthropic’s biology research lab: the first 3D structure of a vault particle found in prokaryotic cells. Here, we describe how Claude helped at each step of this research.": "Estamos compartilhando outra descoberta do laboratório de pesquisa biológica do Anthropic: a primeira estrutura 3D de uma partícula em forma de abóbada encontrada em células procarióticas. Aqui descrevemos como Claude ajudou em cada etapa desta pesquisa."
 },
 "lembrados": [],
 "dica_dia": "2026-11-04"
