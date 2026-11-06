@@ -5937,6 +5937,36 @@
 "resumo_pt": "Claude Enterprise possui novos recursos de segurança e administração, incluindo uma central de segurança, ganchos de inferência, gerenciamento centralizado e controles de acesso adicionais, vários deles em versão beta. Para obter mais informações, consulte nossa postagem no blog: Mais visibilidade e controle sobre o Claude Enterprise para equipes de segurança.",
 "topicos_pt": [],
 "pt": true
+},
+"app:November 5, 2026Personal Finance in Claude": {
+"k": "app:November 5, 2026Personal Finance in Claude",
+"cat": "app",
+"titulo": "Personal Finance in Claude",
+"url": "https://support.claude.com/en/articles/12138966-release-notes",
+"ts": 1793847600.0,
+"resumo": "We’re rolling out Personal Finance, a beta that lets you link your bank, credit card, loan, and investment accounts to Claude, so you can see your balances and spending on one page and ask Claude questions about your own money. It's available on Pro, Max, and Ultra plans, and is available in the US only. For more information, see our blog post: Introducing Personal Finance in Claude .",
+"topicos": [],
+"info": "",
+"visto": 1793933145.5088582,
+"titulo_pt": "Finanças Pessoais em Claude",
+"resumo_pt": "Estamos lançando o Personal Finance, uma versão beta que permite vincular suas contas bancárias, de cartão de crédito, de empréstimo e de investimento ao Claude, para que você possa ver seus saldos e gastos em uma página e fazer perguntas ao Claude sobre seu próprio dinheiro. Está disponível nos planos Pro, Max e Ultra e está disponível apenas nos EUA. Para obter mais informações, consulte nossa postagem no blog: Apresentando finanças pessoais em Claude.",
+"topicos_pt": [],
+"pt": true
+},
+"hn:50385272": {
+"k": "hn:50385272",
+"cat": "comunidade",
+"titulo": "Claude Code sends your email address to websites",
+"url": "https://github.com/anthropics/claude-code/issues/107757",
+"ts": 1793917035,
+"resumo": "",
+"topicos": [],
+"info": "591 pontos e 198 comentario(s) no Hacker News",
+"visto": 1793933145.5088582,
+"titulo_pt": "Claude Code envia seu endereço de e-mail para sites",
+"resumo_pt": "",
+"topicos_pt": [],
+"pt": true
 }
 },
 "agenda": {
@@ -6609,7 +6639,10 @@
 "AI for scientific discovery: How researchers use Claude": "IA para descoberta científica: como os pesquisadores usam Claude",
 "In this report, we use privacy-preserving infrastructure to study the scientific use of Claude, Claude Code, and Claude Science. We document how usage varies across scientific fields and research tasks, identify what explains these usage patterns, and outline scenarios for how AI could accelerate research.": "Neste relatório, utilizamos infraestrutura de preservação da privacidade para estudar o uso científico de Claude, Claude Code e Claude Science. Documentamos como o uso varia entre campos científicos e tarefas de pesquisa, identificamos o que explica esses padrões de uso e delineamos cenários de como a IA poderia acelerar a pesquisa.",
 "New security and admin controls for Enterprise plans": "Novos controles de segurança e administração para planos empresariais",
-"Claude Enterprise has new security and admin features, including a security center, inference hooks, centralized management, and additional access controls, several in beta. For more information, see our blog post: More visibility and control over Claude Enterprise for security teams .": "Claude Enterprise possui novos recursos de segurança e administração, incluindo uma central de segurança, ganchos de inferência, gerenciamento centralizado e controles de acesso adicionais, vários deles em versão beta. Para obter mais informações, consulte nossa postagem no blog: Mais visibilidade e controle sobre o Claude Enterprise para equipes de segurança."
+"Claude Enterprise has new security and admin features, including a security center, inference hooks, centralized management, and additional access controls, several in beta. For more information, see our blog post: More visibility and control over Claude Enterprise for security teams .": "Claude Enterprise possui novos recursos de segurança e administração, incluindo uma central de segurança, ganchos de inferência, gerenciamento centralizado e controles de acesso adicionais, vários deles em versão beta. Para obter mais informações, consulte nossa postagem no blog: Mais visibilidade e controle sobre o Claude Enterprise para equipes de segurança.",
+"Personal Finance in Claude": "Finanças Pessoais em Claude",
+"We’re rolling out Personal Finance, a beta that lets you link your bank, credit card, loan, and investment accounts to Claude, so you can see your balances and spending on one page and ask Claude questions about your own money. It's available on Pro, Max, and Ultra plans, and is available in the US only. For more information, see our blog post: Introducing Personal Finance in Claude .": "Estamos lançando o Personal Finance, uma versão beta que permite vincular suas contas bancárias, de cartão de crédito, de empréstimo e de investimento ao Claude, para que você possa ver seus saldos e gastos em uma página e fazer perguntas ao Claude sobre seu próprio dinheiro. Está disponível nos planos Pro, Max e Ultra e está disponível apenas nos EUA. Para obter mais informações, consulte nossa postagem no blog: Apresentando finanças pessoais em Claude.",
+"Claude Code sends your email address to websites": "Claude Code envia seu endereço de e-mail para sites"
 },
 "lembrados": [],
 "dica_dia": "2026-11-05"
