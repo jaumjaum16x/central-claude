@@ -5919,9 +5919,9 @@
 "info": "",
 "visto": 1793913072.5237343,
 "titulo_pt": "IA para descoberta científica: como os pesquisadores usam Claude",
-"resumo_pt": "We analyzed 207,000 research sessions to learn how Claude is used in science, why some tasks get more use than others, and how AI could speed up discovery.",
+"resumo_pt": "Analisamos 207 mil sessões de pesquisa para saber como o Claude é usado na ciência, por que algumas tarefas são mais utilizadas do que outras e como a IA poderia acelerar a descoberta.",
 "topicos_pt": [],
-"pt": false
+"pt": true
 },
 "app:November 5, 2026New security and admin controls for Enterprise plans": {
 "k": "app:November 5, 2026New security and admin controls for Enterprise plans",
@@ -5978,10 +5978,10 @@
 "topicos": [],
 "info": "",
 "visto": 1793993924.2352169,
-"titulo_pt": "Teaching AI to build scientific models",
-"resumo_pt": "In this guest post, Jakob Macke, Daniel Gedon, and Stefan Wahl discuss how AI is starting to change the scientific modeling process, from construction to interpretation.",
+"titulo_pt": "Ensinando IA a construir modelos científicos",
+"resumo_pt": "Neste post convidado, Jakob Macke, Daniel Gedon e Stefan Wahl discutem como a IA está começando a mudar o processo de modelagem científica, da construção à interpretação.",
 "topicos_pt": [],
-"pt": false
+"pt": true
 },
 "app:November 6, 2026Track spend by cost code with project tags (beta)": {
 "k": "app:November 6, 2026Track spend by cost code with project tags (beta)",
@@ -5993,10 +5993,10 @@
 "topicos": [],
 "info": "",
 "visto": 1793993924.2352169,
-"titulo_pt": "Track spend by cost code with project tags (beta)",
-"resumo_pt": "Eligible Enterprise organizations can now tag projects with the codes they already use, like a charge code or client-matter number, and see most spend in those projects by tag. This feature is available in beta. For more information, see Track spend by cost code with project tags .",
+"titulo_pt": "Acompanhe os gastos por código de custo com tags de projeto (beta)",
+"resumo_pt": "As organizações empresariais qualificadas agora podem marcar projetos com os códigos que já usam, como um código de cobrança ou número de cliente, e ver a maior parte dos gastos nesses projetos por etiqueta. Este recurso está disponível em versão beta. Para obter mais informações, consulte Rastrear gastos por código de custo com tags de projeto.",
 "topicos_pt": [],
-"pt": false
+"pt": true
 },
 "code:v2.1.319": {
 "k": "code:v2.1.319",
@@ -6158,18 +6158,18 @@
 "titulo_pt": "Claude Code v2.1.319",
 "resumo_pt": "",
 "topicos_pt": [
-"Changed auto mode with telemetry or feature flags off, including behind LLM gateways: calls the server can't check are asked about or denied, with no fallback to the built-in classifier; set CLAUDE_CODE_AUTO_MODE_SERVER=0 to keep using it (Bedrock, Vertex and Foundry are unchanged)",
-"Changed auto mode behind an LLM gateway: CLAUDE_CODE_AUTO_MODE_SERVER=1 turns on the server-side check even with CLAUDE_CODE_DISABLE_EXPERIMENTAL_BETAS set; if managed settings set the latter, they must set the 1 too",
-"Added support for MCP tasks in the terminal: when an MCP server runs a tool call as a task, Claude Code moves it to the background right away and tells Claude the result when it finishes",
-"Added the CLAUDE_CODE_DISABLE_MCP_TASK_BACKGROUND environment variable to make Claude Code wait for an MCP task inside its tool call instead of moving it to the background right away",
-"Added permissions.denyInsteadOfPrompting setting: a tool call that would wait on a permission prompt is denied and the turn continues, in terminal sessions, subagents and teammates",
-"Added /claude-api latency-optimize to find where your Claude API code makes people wait and try faster settings against your eval",
-"Added the CLAUDE_CODE_DISABLE_FEATURE_FLAGS environment variable, which stops feature-flag fetching without turning off telemetry; every flag then uses its built-in default",
-"Added spend for today, this week and this month to /usage for developers behind a Claude apps gateway who have no spend limit, when the gateway runs this version or later",
-"Added admin.pooled_conflict_rule and admin.pooled_priority_order to the Claude apps gateway, to set which pooled group budget pays first for a developer in several groups",
-"Added an optional login_notice setting to the Claude apps gateway that shows an operator-defined message on the gateway's browser verification page and on Claude Code's sign-in screen",
-"Added CLAUDE_GATEWAY_LOG_FORMAT=json to the Claude apps gateway: operational log lines become JSON with severity, time and message, for log collectors that read the level from a field",
-"Added a Claude apps gateway boot warning for a case where another policy's availableModels also allows a custom model id that one policy lists by name",
+"Modo automático alterado com telemetria ou sinalizadores de recursos desativados, inclusive atrás de gateways LLM: chamadas que o servidor não pode verificar são questionadas ou negadas, sem retorno ao classificador integrado; defina CLAUDE_CODE_AUTO_MODE_SERVER=0 para continuar usando-o (Bedrock, Vertex e Foundry permanecem inalterados)",
+"Modo automático alterado atrás de um gateway LLM: CLAUDE_CODE_AUTO_MODE_SERVER=1 ativa a verificação do lado do servidor mesmo com CLAUDE_CODE_DISABLE_EXPERIMENTAL_BETAS definido; se as configurações gerenciadas definirem o último, elas deverão definir o 1 também",
+"Adicionado suporte para tarefas MCP no terminal: quando um servidor MCP executa uma chamada de ferramenta como uma tarefa, Claude Code a move para segundo plano imediatamente e informa a Claude o resultado quando termina",
+"Adicionada a variável de ambiente CLAUDE_CODE_DISABLE_MCP_TASK_BACKGROUND para fazer o Claude Code esperar por uma tarefa MCP dentro de sua chamada de ferramenta em vez de movê-la para segundo plano imediatamente",
+"Adicionada configuração permissions.denyInsteadOfPrompting: uma chamada de ferramenta que esperaria em um prompt de permissão é negada e o turno continua, em sessões de terminal, subagentes e colegas de equipe",
+"Adicionado /claude-api latency-optimize para descobrir onde seu código da API Claude faz as pessoas esperarem e tentar configurações mais rápidas em sua avaliação",
+"Adicionada a variável de ambiente CLAUDE_CODE_DISABLE_FEATURE_FLAGS, que interrompe a busca do sinalizador de recurso sem desligar a telemetria; cada sinalizador usa seu padrão interno",
+"Adicionados gastos para hoje, esta semana e este mês em /usage para desenvolvedores atrás de um gateway de aplicativos Claude que não têm limite de gastos, quando o gateway executa esta versão ou posterior",
+"Adicionados admin.pooled_conflict_rule e admin.pooled_priority_order ao gateway de aplicativos Claude, para definir qual orçamento de grupo agrupado paga primeiro para um desenvolvedor em vários grupos",
+"Adicionada uma configuração login_notice opcional ao gateway de aplicativos Claude que mostra uma mensagem definida pelo operador na página de verificação do navegador do gateway e na tela de login do Claude Code",
+"Adicionado CLAUDE_GATEWAY_LOG_FORMAT=json ao gateway de aplicativos Claude: linhas de log operacionais tornam-se JSON com gravidade, hora e mensagem, para coletores de log que leem o nível de um campo",
+"Adicionado um aviso de inicialização do gateway de aplicativos Claude para um caso em que os availableModels de outra política também permitem um ID de modelo personalizado que uma política lista por nome",
 "Added start-up warnings to the Claude apps gateway for policies with no desktopHome that rely on coworkTabEnabled: false or chatSessionRetentionDays, ahead of Claude Desktop's November 10 change",
 "Added a warning when your claude.ai login ends and Claude Code continues on the sign-in from ant auth login, which bills usage to your Claude Console organization",
 "Added a line at startup naming the Claude Console organization that is billed in a case where Claude Code uses the sign-in from ant auth login",
@@ -6305,7 +6305,7 @@
 "[Claude Tag] Added a Claude Tag row to the Models admin page for Enterprise orgs with Claude Tag connected, linking to where its model defaults are managed",
 "[Claude Tag] Fixed saving auto mode allow rules in Claude Tag admin settings overwriting another admin's changes; the save is now refused with a message"
 ],
-"pt": false
+"pt": true
 },
 "rss:https://www.anthropic.com/research/components-of-agent-memory": {
 "k": "rss:https://www.anthropic.com/research/components-of-agent-memory",
@@ -6317,10 +6317,10 @@
 "topicos": [],
 "info": "",
 "visto": 1794010526.3800426,
-"titulo_pt": "The components of agent memory",
-"resumo_pt": "For Claude to learn from experience, it has to decide what’s worth remembering before it knows what’s next. Here’s how “dreaming” helps it organize memory and correct mistakes.",
+"titulo_pt": "Os componentes da memória do agente",
+"resumo_pt": "Para que Claude aprenda com a experiência, é preciso decidir o que vale a pena lembrar antes de saber o que vem a seguir. Veja como “sonhar” ajuda a organizar a memória e a corrigir erros.",
 "topicos_pt": [],
-"pt": false
+"pt": true
 }
 },
 "agenda": {
@@ -6995,7 +6995,27 @@
 "Claude Enterprise has new security and admin features, including a security center, inference hooks, centralized management, and additional access controls, several in beta. For more information, see our blog post: More visibility and control over Claude Enterprise for security teams .": "Claude Enterprise possui novos recursos de segurança e administração, incluindo uma central de segurança, ganchos de inferência, gerenciamento centralizado e controles de acesso adicionais, vários deles em versão beta. Para obter mais informações, consulte nossa postagem no blog: Mais visibilidade e controle sobre o Claude Enterprise para equipes de segurança.",
 "Personal Finance in Claude": "Finanças Pessoais em Claude",
 "We’re rolling out Personal Finance, a beta that lets you link your bank, credit card, loan, and investment accounts to Claude, so you can see your balances and spending on one page and ask Claude questions about your own money. It's available on Pro, Max, and Ultra plans, and is available in the US only. For more information, see our blog post: Introducing Personal Finance in Claude .": "Estamos lançando o Personal Finance, uma versão beta que permite vincular suas contas bancárias, de cartão de crédito, de empréstimo e de investimento ao Claude, para que você possa ver seus saldos e gastos em uma página e fazer perguntas ao Claude sobre seu próprio dinheiro. Está disponível nos planos Pro, Max e Ultra e está disponível apenas nos EUA. Para obter mais informações, consulte nossa postagem no blog: Apresentando finanças pessoais em Claude.",
-"Claude Code sends your email address to websites": "Claude Code envia seu endereço de e-mail para sites"
+"Claude Code sends your email address to websites": "Claude Code envia seu endereço de e-mail para sites",
+"We analyzed 207,000 research sessions to learn how Claude is used in science, why some tasks get more use than others, and how AI could speed up discovery.": "Analisamos 207 mil sessões de pesquisa para saber como o Claude é usado na ciência, por que algumas tarefas são mais utilizadas do que outras e como a IA poderia acelerar a descoberta.",
+"Teaching AI to build scientific models": "Ensinando IA a construir modelos científicos",
+"In this guest post, Jakob Macke, Daniel Gedon, and Stefan Wahl discuss how AI is starting to change the scientific modeling process, from construction to interpretation.": "Neste post convidado, Jakob Macke, Daniel Gedon e Stefan Wahl discutem como a IA está começando a mudar o processo de modelagem científica, da construção à interpretação.",
+"Track spend by cost code with project tags (beta)": "Acompanhe os gastos por código de custo com tags de projeto (beta)",
+"Eligible Enterprise organizations can now tag projects with the codes they already use, like a charge code or client-matter number, and see most spend in those projects by tag. This feature is available in beta. For more information, see Track spend by cost code with project tags .": "As organizações empresariais qualificadas agora podem marcar projetos com os códigos que já usam, como um código de cobrança ou número de cliente, e ver a maior parte dos gastos nesses projetos por etiqueta. Este recurso está disponível em versão beta. Para obter mais informações, consulte Rastrear gastos por código de custo com tags de projeto.",
+"Claude Code v2.1.319": "Claude Code v2.1.319",
+"Changed auto mode with telemetry or feature flags off, including behind LLM gateways: calls the server can't check are asked about or denied, with no fallback to the built-in classifier; set CLAUDE_CODE_AUTO_MODE_SERVER=0 to keep using it (Bedrock, Vertex and Foundry are unchanged)": "Modo automático alterado com telemetria ou sinalizadores de recursos desativados, inclusive atrás de gateways LLM: chamadas que o servidor não pode verificar são questionadas ou negadas, sem retorno ao classificador integrado; defina CLAUDE_CODE_AUTO_MODE_SERVER=0 para continuar usando-o (Bedrock, Vertex e Foundry permanecem inalterados)",
+"Changed auto mode behind an LLM gateway: CLAUDE_CODE_AUTO_MODE_SERVER=1 turns on the server-side check even with CLAUDE_CODE_DISABLE_EXPERIMENTAL_BETAS set; if managed settings set the latter, they must set the 1 too": "Modo automático alterado atrás de um gateway LLM: CLAUDE_CODE_AUTO_MODE_SERVER=1 ativa a verificação do lado do servidor mesmo com CLAUDE_CODE_DISABLE_EXPERIMENTAL_BETAS definido; se as configurações gerenciadas definirem o último, elas deverão definir o 1 também",
+"Added support for MCP tasks in the terminal: when an MCP server runs a tool call as a task, Claude Code moves it to the background right away and tells Claude the result when it finishes": "Adicionado suporte para tarefas MCP no terminal: quando um servidor MCP executa uma chamada de ferramenta como uma tarefa, Claude Code a move para segundo plano imediatamente e informa a Claude o resultado quando termina",
+"Added the CLAUDE_CODE_DISABLE_MCP_TASK_BACKGROUND environment variable to make Claude Code wait for an MCP task inside its tool call instead of moving it to the background right away": "Adicionada a variável de ambiente CLAUDE_CODE_DISABLE_MCP_TASK_BACKGROUND para fazer o Claude Code esperar por uma tarefa MCP dentro de sua chamada de ferramenta em vez de movê-la para segundo plano imediatamente",
+"Added permissions.denyInsteadOfPrompting setting: a tool call that would wait on a permission prompt is denied and the turn continues, in terminal sessions, subagents and teammates": "Adicionada configuração permissions.denyInsteadOfPrompting: uma chamada de ferramenta que esperaria em um prompt de permissão é negada e o turno continua, em sessões de terminal, subagentes e colegas de equipe",
+"Added /claude-api latency-optimize to find where your Claude API code makes people wait and try faster settings against your eval": "Adicionado /claude-api latency-optimize para descobrir onde seu código da API Claude faz as pessoas esperarem e tentar configurações mais rápidas em sua avaliação",
+"Added the CLAUDE_CODE_DISABLE_FEATURE_FLAGS environment variable, which stops feature-flag fetching without turning off telemetry; every flag then uses its built-in default": "Adicionada a variável de ambiente CLAUDE_CODE_DISABLE_FEATURE_FLAGS, que interrompe a busca do sinalizador de recurso sem desligar a telemetria; cada sinalizador usa seu padrão interno",
+"Added spend for today, this week and this month to /usage for developers behind a Claude apps gateway who have no spend limit, when the gateway runs this version or later": "Adicionados gastos para hoje, esta semana e este mês em /usage para desenvolvedores atrás de um gateway de aplicativos Claude que não têm limite de gastos, quando o gateway executa esta versão ou posterior",
+"Added admin.pooled_conflict_rule and admin.pooled_priority_order to the Claude apps gateway, to set which pooled group budget pays first for a developer in several groups": "Adicionados admin.pooled_conflict_rule e admin.pooled_priority_order ao gateway de aplicativos Claude, para definir qual orçamento de grupo agrupado paga primeiro para um desenvolvedor em vários grupos",
+"Added an optional login_notice setting to the Claude apps gateway that shows an operator-defined message on the gateway's browser verification page and on Claude Code's sign-in screen": "Adicionada uma configuração login_notice opcional ao gateway de aplicativos Claude que mostra uma mensagem definida pelo operador na página de verificação do navegador do gateway e na tela de login do Claude Code",
+"Added CLAUDE_GATEWAY_LOG_FORMAT=json to the Claude apps gateway: operational log lines become JSON with severity, time and message, for log collectors that read the level from a field": "Adicionado CLAUDE_GATEWAY_LOG_FORMAT=json ao gateway de aplicativos Claude: linhas de log operacionais tornam-se JSON com gravidade, hora e mensagem, para coletores de log que leem o nível de um campo",
+"Added a Claude apps gateway boot warning for a case where another policy's availableModels also allows a custom model id that one policy lists by name": "Adicionado um aviso de inicialização do gateway de aplicativos Claude para um caso em que os availableModels de outra política também permitem um ID de modelo personalizado que uma política lista por nome",
+"The components of agent memory": "Os componentes da memória do agente",
+"For Claude to learn from experience, it has to decide what’s worth remembering before it knows what’s next. Here’s how “dreaming” helps it organize memory and correct mistakes.": "Para que Claude aprenda com a experiência, é preciso decidir o que vale a pena lembrar antes de saber o que vem a seguir. Veja como “sonhar” ajuda a organizar a memória e a corrigir erros."
 },
 "lembrados": [],
 "dica_dia": "2026-11-06"
