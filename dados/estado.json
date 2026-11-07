@@ -6306,6 +6306,21 @@
 "[Claude Tag] Fixed saving auto mode allow rules in Claude Tag admin settings overwriting another admin's changes; the save is now refused with a message"
 ],
 "pt": false
+},
+"rss:https://www.anthropic.com/research/components-of-agent-memory": {
+"k": "rss:https://www.anthropic.com/research/components-of-agent-memory",
+"cat": "pesquisa",
+"titulo": "The components of agent memory",
+"url": "https://www.anthropic.com/research/components-of-agent-memory",
+"ts": 1793923200.0,
+"resumo": "For Claude to learn from experience, it has to decide what’s worth remembering before it knows what’s next. Here’s how “dreaming” helps it organize memory and correct mistakes.",
+"topicos": [],
+"info": "",
+"visto": 1794010526.3800426,
+"titulo_pt": "The components of agent memory",
+"resumo_pt": "For Claude to learn from experience, it has to decide what’s worth remembering before it knows what’s next. Here’s how “dreaming” helps it organize memory and correct mistakes.",
+"topicos_pt": [],
+"pt": false
 }
 },
 "agenda": {
