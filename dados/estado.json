@@ -6321,6 +6321,21 @@
 "resumo_pt": "Para que Claude aprenda com a experiência, é preciso decidir o que vale a pena lembrar antes de saber o que vem a seguir. Veja como “sonhar” ajuda a organizar a memória e a corrigir erros.",
 "topicos_pt": [],
 "pt": true
+},
+"hn:50407882": {
+"k": "hn:50407882",
+"cat": "comunidade",
+"titulo": "Claude Code's \"Don't Ask Again\" exposes passwords in 1,122 public GitHub files",
+"url": "https://apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again",
+"ts": 1794084332,
+"resumo": "",
+"topicos": [],
+"info": "312 pontos e 214 comentario(s) no Hacker News",
+"visto": 1794119721.8848605,
+"titulo_pt": "Claude Code's \"Don't Ask Again\" exposes passwords in 1,122 public GitHub files",
+"resumo_pt": "",
+"topicos_pt": [],
+"pt": false
 }
 },
 "agenda": {
