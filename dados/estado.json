@@ -6351,6 +6351,21 @@
 "resumo_pt": "",
 "topicos_pt": [],
 "pt": true
+},
+"hn:50415628": {
+"k": "hn:50415628",
+"cat": "comunidade",
+"titulo": "Goldman Sachs is pulling Claude Code from its bankers and traders",
+"url": "https://www.thestateofai.com/news/goldman-sachs-claude-code-traders-bankers",
+"ts": 1794161767,
+"resumo": "",
+"topicos": [],
+"info": "537 pontos e 327 comentario(s) no Hacker News",
+"visto": 1794182210.672002,
+"titulo_pt": "Goldman Sachs está retirando Claude Code de seus banqueiros e traders",
+"resumo_pt": "",
+"topicos_pt": [],
+"pt": true
 }
 },
 "agenda": {
@@ -7047,7 +7062,8 @@
 "The components of agent memory": "Os componentes da memória do agente",
 "For Claude to learn from experience, it has to decide what’s worth remembering before it knows what’s next. Here’s how “dreaming” helps it organize memory and correct mistakes.": "Para que Claude aprenda com a experiência, é preciso decidir o que vale a pena lembrar antes de saber o que vem a seguir. Veja como “sonhar” ajuda a organizar a memória e a corrigir erros.",
 "Claude Code's \"Don't Ask Again\" exposes passwords in 1,122 public GitHub files": "\"Don't Ask Again\" do Claude Code expõe senhas em 1.122 arquivos públicos do GitHub",
-"Goodbye Claude, Hello Pi": "Adeus Claude, Olá Pi"
+"Goodbye Claude, Hello Pi": "Adeus Claude, Olá Pi",
+"Goldman Sachs is pulling Claude Code from its bankers and traders": "Goldman Sachs está retirando Claude Code de seus banqueiros e traders"
 },
 "lembrados": [],
 "dica_dia": "2026-11-08"
