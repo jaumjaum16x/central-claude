@@ -6758,6 +6758,66 @@
 "resumo_pt": "Hoje Anthropic, PBC lançou o roadshow para sua proposta de oferta pública inicial de suas ações ordinárias Classe A.",
 "topicos_pt": [],
 "pt": true
+},
+"rss:https://claude.com/resources/articles/sheets-whiteboards-data": {
+"k": "rss:https://claude.com/resources/articles/sheets-whiteboards-data",
+"cat": "blog",
+"titulo": "Introducing Claude Whiteboards, Claude Sheets, and Claude Data",
+"url": "https://claude.com/resources/articles/sheets-whiteboards-data",
+"ts": 1794268800.0,
+"resumo": "Now you can brainstorm on whiteboards, build sheets, and share data directly in Claude.",
+"topicos": [],
+"info": "",
+"visto": 1794344290.6259544,
+"titulo_pt": "Apresentando Claude Whiteboards, Claude Sheets e Claude Data",
+"resumo_pt": "Agora você pode fazer brainstorming em quadros brancos, criar planilhas e compartilhar dados diretamente no Claude.",
+"topicos_pt": [],
+"pt": true
+},
+"rss:https://claude.com/resources/articles/more-ways-to-work-with-claude-sheets-whiteboards-and-interactive-connectors": {
+"k": "rss:https://claude.com/resources/articles/more-ways-to-work-with-claude-sheets-whiteboards-and-interactive-connectors",
+"cat": "blog",
+"titulo": "More ways to work with Claude: Sheets, Whiteboards, and Interactive Connectors",
+"url": "https://claude.com/resources/articles/more-ways-to-work-with-claude-sheets-whiteboards-and-interactive-connectors",
+"ts": 1794268800.0,
+"resumo": "Work at the speed of thought",
+"topicos": [],
+"info": "",
+"visto": 1794344290.6259544,
+"titulo_pt": "Mais maneiras de trabalhar com Claude: planilhas, quadros brancos e conectores interativos",
+"resumo_pt": "Trabalhe na velocidade do pensamento",
+"topicos_pt": [],
+"pt": true
+},
+"rss:https://claude.com/resources/articles/interactive-connectors-full-tool": {
+"k": "rss:https://claude.com/resources/articles/interactive-connectors-full-tool",
+"cat": "blog",
+"titulo": "Your apps can now open in Claude, and Claude can work in them",
+"url": "https://claude.com/resources/articles/interactive-connectors-full-tool",
+"ts": 1794268800.0,
+"resumo": "Our partners can now embed their apps directly in Claude, so you and Claude can work in the same tool, on the same screen, without switching tabs.",
+"topicos": [],
+"info": "",
+"visto": 1794344290.6259544,
+"titulo_pt": "Seus aplicativos agora podem ser abertos no Claude, e Claude pode trabalhar neles",
+"resumo_pt": "Nossos parceiros agora podem incorporar seus aplicativos diretamente no Claude, para que você e Claude possam trabalhar na mesma ferramenta, na mesma tela, sem alternar entre guias.",
+"topicos_pt": [],
+"pt": true
+},
+"rss:https://claude.com/resources/articles/how-curative-is-building-a-national-provider-network-with-agents-on-claude": {
+"k": "rss:https://claude.com/resources/articles/how-curative-is-building-a-national-provider-network-with-agents-on-claude",
+"cat": "blog",
+"titulo": "How Curative is building a national provider network with agents on Claude",
+"url": "https://claude.com/resources/articles/how-curative-is-building-a-national-provider-network-with-agents-on-claude",
+"ts": 1794268800.0,
+"resumo": "Curative’s deal-making agent negotiates 2,000+ provider contracts a week.",
+"topicos": [],
+"info": "",
+"visto": 1794344290.6259544,
+"titulo_pt": "Como a Curative está construindo uma rede nacional de provedores com agentes em Claude",
+"resumo_pt": "O agente negociador da Curative negocia mais de 2.000 contratos de fornecedores por semana.",
+"topicos_pt": [],
+"pt": true
 }
 },
 "agenda": {
@@ -7482,7 +7542,15 @@
 "Added fast mode on Vertex in the global, us and eu regions, falling back to standard speed if Vertex refuses it": "Adicionado modo rápido no Vertex nas regiões global, EUA e UE, voltando à velocidade padrão se o Vertex recusar",
 "Claude Fable 5.2 scores 65 on Artificial Analysis, highest so far": "Claude Fable 5.2 pontua 65 em Análise Artificial, a mais alta até agora",
 "Anthropic launches roadshow for proposed initial public offering": "Anthropic lança roadshow para proposta de oferta pública inicial",
-"Today Anthropic, PBC launched the roadshow for its proposed initial public offering of its Class A common stock.": "Hoje Anthropic, PBC lançou o roadshow para sua proposta de oferta pública inicial de suas ações ordinárias Classe A."
+"Today Anthropic, PBC launched the roadshow for its proposed initial public offering of its Class A common stock.": "Hoje Anthropic, PBC lançou o roadshow para sua proposta de oferta pública inicial de suas ações ordinárias Classe A.",
+"Introducing Claude Whiteboards, Claude Sheets, and Claude Data": "Apresentando Claude Whiteboards, Claude Sheets e Claude Data",
+"Now you can brainstorm on whiteboards, build sheets, and share data directly in Claude.": "Agora você pode fazer brainstorming em quadros brancos, criar planilhas e compartilhar dados diretamente no Claude.",
+"More ways to work with Claude: Sheets, Whiteboards, and Interactive Connectors": "Mais maneiras de trabalhar com Claude: planilhas, quadros brancos e conectores interativos",
+"Work at the speed of thought": "Trabalhe na velocidade do pensamento",
+"Your apps can now open in Claude, and Claude can work in them": "Seus aplicativos agora podem ser abertos no Claude, e Claude pode trabalhar neles",
+"Our partners can now embed their apps directly in Claude, so you and Claude can work in the same tool, on the same screen, without switching tabs.": "Nossos parceiros agora podem incorporar seus aplicativos diretamente no Claude, para que você e Claude possam trabalhar na mesma ferramenta, na mesma tela, sem alternar entre guias.",
+"How Curative is building a national provider network with agents on Claude": "Como a Curative está construindo uma rede nacional de provedores com agentes em Claude",
+"Curative’s deal-making agent negotiates 2,000+ provider contracts a week.": "O agente negociador da Curative negocia mais de 2.000 contratos de fornecedores por semana."
 },
 "lembrados": [],
 "dica_dia": "2026-11-10"
