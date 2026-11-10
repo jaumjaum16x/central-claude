@@ -6377,10 +6377,10 @@
 "topicos": [],
 "info": "",
 "visto": 1794279148.0089087,
-"titulo_pt": "Claude Fable 5.2 and Mythos 5.2",
-"resumo_pt": "Introducing Claude Fable 5.2 and Claude Mythos 5.2, our new models for the hardest technical challenges.",
+"titulo_pt": "Claude Fable 5.2 e Mythos 5.2",
+"resumo_pt": "Apresentamos Claude Fable 5.2 e Claude Mythos 5.2, nossos novos modelos para os desafios técnicos mais difíceis.",
 "topicos_pt": [],
-"pt": false
+"pt": true
 },
 "rss:https://www.anthropic.com/research/claude-electronics-design": {
 "k": "rss:https://www.anthropic.com/research/claude-electronics-design",
@@ -6392,10 +6392,10 @@
 "topicos": [],
 "info": "",
 "visto": 1794279148.0089087,
-"titulo_pt": "Testing Claude on real-world electronics design",
-"resumo_pt": "We asked Claude Fable 5.2 to design three electronic devices from short prompts: a speakerphone, a voice-assistant hub, and a handheld virtual pet. Diode Computers built working prototypes from its files.",
+"titulo_pt": "Testando Claude em design eletrônico do mundo real",
+"resumo_pt": "Pedimos a Claude Fable 5.2 para projetar três dispositivos eletrônicos a partir de prompts curtos: um viva-voz, um hub de assistente de voz e um animal de estimação virtual portátil. A Diode Computers construiu protótipos funcionais a partir de seus arquivos.",
 "topicos_pt": [],
-"pt": false
+"pt": true
 },
 "rss:https://claude.dev/blog/which-claude-model-should-you-build-with/": {
 "k": "rss:https://claude.dev/blog/which-claude-model-should-you-build-with/",
@@ -6407,10 +6407,10 @@
 "topicos": [],
 "info": "",
 "visto": 1794279148.0089087,
-"titulo_pt": "Which Claude model should you build with?",
-"resumo_pt": "How to choose between Claude Fable 5.2, Opus 5.5, Sonnet 5.5, and Haiku 5.5 by task, cost, and effort level.",
+"titulo_pt": "Com qual modelo de Claude você deve construir?",
+"resumo_pt": "Como escolher entre Claude Fable 5.2, Opus 5.5, Sonnet 5.5 e Haiku 5.5 por tarefa, custo e nível de esforço.",
 "topicos_pt": [],
-"pt": false
+"pt": true
 },
 "rss:https://claude.dev/blog/safely-scaling-multi-agent-teams-with-fable-5-2/": {
 "k": "rss:https://claude.dev/blog/safely-scaling-multi-agent-teams-with-fable-5-2/",
@@ -6422,10 +6422,10 @@
 "topicos": [],
 "info": "",
 "visto": 1794279148.0089087,
-"titulo_pt": "Safely scaling multi-agent teams with Claude Fable 5.2",
-"resumo_pt": "How a team of 1,000 agents running an early version of Claude Fable 5.2 reproduced a formal proof of Fermat's Last Theorem with general tools, a shared database, and layered safety controls.",
+"titulo_pt": "Dimensionando equipes multiagentes com segurança com Claude Fable 5.2",
+"resumo_pt": "Como uma equipe de 1.000 agentes executando uma versão inicial do Claude Fable 5.2 reproduziu uma prova formal do Último Teorema de Fermat com ferramentas gerais, um banco de dados compartilhado e controles de segurança em camadas.",
 "topicos_pt": [],
-"pt": false
+"pt": true
 },
 "rss:https://claude.com/resources/articles/jpmorganchase-expands-claude-code": {
 "k": "rss:https://claude.com/resources/articles/jpmorganchase-expands-claude-code",
@@ -6437,10 +6437,10 @@
 "topicos": [],
 "info": "",
 "visto": 1794279148.0089087,
-"titulo_pt": "JPMorganChase expands Claude Code to more employees across the firm",
-"resumo_pt": "JPMorganChase expands Claude Code to more employees across the firm",
+"titulo_pt": "JPMorganChase expande Claude Code para mais funcionários em toda a empresa",
+"resumo_pt": "JPMorganChase expande Claude Code para mais funcionários em toda a empresa",
 "topicos_pt": [],
-"pt": false
+"pt": true
 },
 "hn:50429906": {
 "k": "hn:50429906",
@@ -6452,10 +6452,10 @@
 "topicos": [],
 "info": "963 pontos e 6 comentario(s) no Hacker News",
 "visto": 1794279148.0089087,
-"titulo_pt": "Claude Fable 5.2 and Mythos 5.2",
+"titulo_pt": "Claude Fable 5.2 e Mythos 5.2",
 "resumo_pt": "",
 "topicos_pt": [],
-"pt": false
+"pt": true
 },
 "code:v2.1.321": {
 "k": "code:v2.1.321",
@@ -6589,18 +6589,18 @@
 "titulo_pt": "Claude Code v2.1.321",
 "resumo_pt": "",
 "topicos_pt": [
-"Added Claude Fable 5.2 (claude-fable-5-2), now the default Fable model — 1M context, $8/$40 per Mtok with $0.20/Mtok cache reads",
-"Added --settings to claude remote-control, which applies a settings file to every session it starts; if the file changes, no new session starts until you restart claude remote-control",
-"Fixed MCP OAuth requests sending secrets such as refresh tokens to another host when a server redirected them",
-"Fixed a case where a read-only Bash command ran outside the sandbox without a permission prompt",
-"Fixed a case where Bash permission checks judged a file write from the wrong folder and didn't prompt",
-"Fixed deny rules and protected-file prompts not applying to the file that a cp or mv into a directory writes",
-"Fixed the \"Draws from usage credits\" note showing after a switch to Fable on Enterprise seats whose plan includes Fable",
-"Fixed the fallback model sometimes declining a request or mentioning a stopped response when the first model was blocked before replying",
-"Fixed claude mcp login printing a SEP-2352 issuer warning each time you sign in again to a server that Claude Code registered with",
-"Fixed NotebookEdit deleting or overwriting a notebook's first cell when the call named no cell, on network paths (UNC shares, WSL folders, /net mounts)",
-"Fixed Edit changing the first of several matches, replacing a whole file on an empty old_string, or editing a notebook as text, on network paths (UNC shares, WSL folders, /net mounts)",
-"Fixed /config showing Manual as the default permission mode when new sessions start in auto mode; pressing Space on \"Auto (default)\" now saves Don't Ask, not Plan",
+"Adicionado Claude Fable 5.2 (claude-fable-5-2), agora o modelo Fable padrão - contexto de 1M, US$ 8/US$ 40 por Mtok com leituras de cache de US$ 0,20/Mtok",
+"Adicionado --settings ao claude remote-control, que aplica um arquivo de configurações a cada sessão iniciada; se o arquivo for alterado, nenhuma nova sessão será iniciada até que você reinicie o claude remote-control",
+"Corrigidas solicitações do MCP OAuth que enviavam segredos, como tokens de atualização, para outro host quando um servidor os redirecionava",
+"Corrigido um caso em que um comando Bash somente leitura era executado fora da sandbox sem um prompt de permissão",
+"Corrigido um caso em que as verificações de permissão do Bash julgavam a gravação de um arquivo na pasta errada e não solicitavam",
+"Corrigidas regras de negação e prompts de arquivos protegidos que não se aplicavam ao arquivo que um cp ou mv grava em um diretório",
+"Corrigida a nota \"Sortes de créditos de uso\" exibida após uma mudança para Fable em assentos Enterprise cujo plano inclui Fable",
+"Corrigido o modelo substituto que às vezes recusava uma solicitação ou mencionava uma resposta interrompida quando o primeiro modelo era bloqueado antes de responder",
+"Corrigido o login do claude mcp imprimindo um aviso do emissor SEP-2352 cada vez que você entra novamente em um servidor com o qual Claude Code registrou",
+"Corrigida a exclusão ou substituição do NotebookEdit da primeira célula de um notebook quando a chamada não nomeava nenhuma célula, em caminhos de rede (compartilhamentos UNC, pastas WSL, montagens /net)",
+"Corrigido Editar alterando a primeira de várias correspondências, substituindo um arquivo inteiro em um old_string vazio ou editando um notebook como texto, em caminhos de rede (compartilhamentos UNC, pastas WSL, montagens /net)",
+"Corrigido /config mostrando Manual como modo de permissão padrão quando novas sessões iniciam no modo automático; pressionar Espaço em \"Automático (padrão)\" agora salva Não pergunte, não planeje",
 "Windows: Fixed FileChanged hooks stopping for paths set through watchPaths after the first shell command, when the session's working directory had a lowercase drive letter",
 "Fixed --plugin-dir . and --plugin-dir ./builtin writing generated type files for Claude Code's built-in plugins into a builtin folder",
 "Fixed context usage estimates overcounting tool definitions when exact token counts are unavailable",
@@ -6708,7 +6708,7 @@
 "[VSCode] Added a warning above the prompt box when both an auth token and an API key are set, matching the terminal's startup warning",
 "[VSCode] Fixed a plugin's permission request showing a name with hidden characters: it now reads \"a plugin\""
 ],
-"pt": false
+"pt": true
 },
 "code:v2.1.322": {
 "k": "code:v2.1.322",
@@ -6725,9 +6725,39 @@
 "titulo_pt": "Claude Code v2.1.322",
 "resumo_pt": "",
 "topicos_pt": [
-"Added fast mode on Vertex in the global, us and eu regions, falling back to standard speed if Vertex refuses it"
+"Adicionado modo rápido no Vertex nas regiões global, EUA e UE, voltando à velocidade padrão se o Vertex recusar"
 ],
-"pt": false
+"pt": true
+},
+"hn:50431144": {
+"k": "hn:50431144",
+"cat": "comunidade",
+"titulo": "Claude Fable 5.2 scores 65 on Artificial Analysis, highest so far",
+"url": "https://artificialanalysis.ai/models/claude-fable-5-2",
+"ts": 1794254695,
+"resumo": "",
+"topicos": [],
+"info": "355 pontos e 255 comentario(s) no Hacker News",
+"visto": 1794315263.2160084,
+"titulo_pt": "Claude Fable 5.2 pontua 65 em Análise Artificial, a mais alta até agora",
+"resumo_pt": "",
+"topicos_pt": [],
+"pt": true
+},
+"rss:https://www.anthropic.com/news/roadshow-launch": {
+"k": "rss:https://www.anthropic.com/news/roadshow-launch",
+"cat": "destaque",
+"titulo": "Anthropic launches roadshow for proposed initial public offering",
+"url": "https://www.anthropic.com/news/roadshow-launch",
+"ts": 1794268800.0,
+"resumo": "Today Anthropic, PBC launched the roadshow for its proposed initial public offering of its Class A common stock.",
+"topicos": [],
+"info": "",
+"visto": 1794315263.2160084,
+"titulo_pt": "Anthropic lança roadshow para proposta de oferta pública inicial",
+"resumo_pt": "Hoje Anthropic, PBC lançou o roadshow para sua proposta de oferta pública inicial de suas ações ordinárias Classe A.",
+"topicos_pt": [],
+"pt": true
 }
 },
 "agenda": {
@@ -7425,8 +7455,35 @@
 "For Claude to learn from experience, it has to decide what’s worth remembering before it knows what’s next. Here’s how “dreaming” helps it organize memory and correct mistakes.": "Para que Claude aprenda com a experiência, é preciso decidir o que vale a pena lembrar antes de saber o que vem a seguir. Veja como “sonhar” ajuda a organizar a memória e a corrigir erros.",
 "Claude Code's \"Don't Ask Again\" exposes passwords in 1,122 public GitHub files": "\"Don't Ask Again\" do Claude Code expõe senhas em 1.122 arquivos públicos do GitHub",
 "Goodbye Claude, Hello Pi": "Adeus Claude, Olá Pi",
-"Goldman Sachs is pulling Claude Code from its bankers and traders": "Goldman Sachs está retirando Claude Code de seus banqueiros e traders"
+"Goldman Sachs is pulling Claude Code from its bankers and traders": "Goldman Sachs está retirando Claude Code de seus banqueiros e traders",
+"Claude Fable 5.2 and Mythos 5.2": "Claude Fable 5.2 e Mythos 5.2",
+"Introducing Claude Fable 5.2 and Claude Mythos 5.2, our new models for the hardest technical challenges.": "Apresentamos Claude Fable 5.2 e Claude Mythos 5.2, nossos novos modelos para os desafios técnicos mais difíceis.",
+"Testing Claude on real-world electronics design": "Testando Claude em design eletrônico do mundo real",
+"We asked Claude Fable 5.2 to design three electronic devices from short prompts: a speakerphone, a voice-assistant hub, and a handheld virtual pet. Diode Computers built working prototypes from its files.": "Pedimos a Claude Fable 5.2 para projetar três dispositivos eletrônicos a partir de prompts curtos: um viva-voz, um hub de assistente de voz e um animal de estimação virtual portátil. A Diode Computers construiu protótipos funcionais a partir de seus arquivos.",
+"Which Claude model should you build with?": "Com qual modelo de Claude você deve construir?",
+"How to choose between Claude Fable 5.2, Opus 5.5, Sonnet 5.5, and Haiku 5.5 by task, cost, and effort level.": "Como escolher entre Claude Fable 5.2, Opus 5.5, Sonnet 5.5 e Haiku 5.5 por tarefa, custo e nível de esforço.",
+"Safely scaling multi-agent teams with Claude Fable 5.2": "Dimensionando equipes multiagentes com segurança com Claude Fable 5.2",
+"How a team of 1,000 agents running an early version of Claude Fable 5.2 reproduced a formal proof of Fermat's Last Theorem with general tools, a shared database, and layered safety controls.": "Como uma equipe de 1.000 agentes executando uma versão inicial do Claude Fable 5.2 reproduziu uma prova formal do Último Teorema de Fermat com ferramentas gerais, um banco de dados compartilhado e controles de segurança em camadas.",
+"JPMorganChase expands Claude Code to more employees across the firm": "JPMorganChase expande Claude Code para mais funcionários em toda a empresa",
+"Claude Code v2.1.321": "Claude Code v2.1.321",
+"Added Claude Fable 5.2 (claude-fable-5-2), now the default Fable model — 1M context, $8/$40 per Mtok with $0.20/Mtok cache reads": "Adicionado Claude Fable 5.2 (claude-fable-5-2), agora o modelo Fable padrão - contexto de 1M, US$ 8/US$ 40 por Mtok com leituras de cache de US$ 0,20/Mtok",
+"Added --settings to claude remote-control, which applies a settings file to every session it starts; if the file changes, no new session starts until you restart claude remote-control": "Adicionado --settings ao claude remote-control, que aplica um arquivo de configurações a cada sessão iniciada; se o arquivo for alterado, nenhuma nova sessão será iniciada até que você reinicie o claude remote-control",
+"Fixed MCP OAuth requests sending secrets such as refresh tokens to another host when a server redirected them": "Corrigidas solicitações do MCP OAuth que enviavam segredos, como tokens de atualização, para outro host quando um servidor os redirecionava",
+"Fixed a case where a read-only Bash command ran outside the sandbox without a permission prompt": "Corrigido um caso em que um comando Bash somente leitura era executado fora da sandbox sem um prompt de permissão",
+"Fixed a case where Bash permission checks judged a file write from the wrong folder and didn't prompt": "Corrigido um caso em que as verificações de permissão do Bash julgavam a gravação de um arquivo na pasta errada e não solicitavam",
+"Fixed deny rules and protected-file prompts not applying to the file that a cp or mv into a directory writes": "Corrigidas regras de negação e prompts de arquivos protegidos que não se aplicavam ao arquivo que um cp ou mv grava em um diretório",
+"Fixed the \"Draws from usage credits\" note showing after a switch to Fable on Enterprise seats whose plan includes Fable": "Corrigida a nota \"Sortes de créditos de uso\" exibida após uma mudança para Fable em assentos Enterprise cujo plano inclui Fable",
+"Fixed the fallback model sometimes declining a request or mentioning a stopped response when the first model was blocked before replying": "Corrigido o modelo substituto que às vezes recusava uma solicitação ou mencionava uma resposta interrompida quando o primeiro modelo era bloqueado antes de responder",
+"Fixed claude mcp login printing a SEP-2352 issuer warning each time you sign in again to a server that Claude Code registered with": "Corrigido o login do claude mcp imprimindo um aviso do emissor SEP-2352 cada vez que você entra novamente em um servidor com o qual Claude Code registrou",
+"Fixed NotebookEdit deleting or overwriting a notebook's first cell when the call named no cell, on network paths (UNC shares, WSL folders, /net mounts)": "Corrigida a exclusão ou substituição do NotebookEdit da primeira célula de um notebook quando a chamada não nomeava nenhuma célula, em caminhos de rede (compartilhamentos UNC, pastas WSL, montagens /net)",
+"Fixed Edit changing the first of several matches, replacing a whole file on an empty old_string, or editing a notebook as text, on network paths (UNC shares, WSL folders, /net mounts)": "Corrigido Editar alterando a primeira de várias correspondências, substituindo um arquivo inteiro em um old_string vazio ou editando um notebook como texto, em caminhos de rede (compartilhamentos UNC, pastas WSL, montagens /net)",
+"Fixed /config showing Manual as the default permission mode when new sessions start in auto mode; pressing Space on \"Auto (default)\" now saves Don't Ask, not Plan": "Corrigido /config mostrando Manual como modo de permissão padrão quando novas sessões iniciam no modo automático; pressionar Espaço em \"Automático (padrão)\" agora salva Não pergunte, não planeje",
+"Claude Code v2.1.322": "Claude Code v2.1.322",
+"Added fast mode on Vertex in the global, us and eu regions, falling back to standard speed if Vertex refuses it": "Adicionado modo rápido no Vertex nas regiões global, EUA e UE, voltando à velocidade padrão se o Vertex recusar",
+"Claude Fable 5.2 scores 65 on Artificial Analysis, highest so far": "Claude Fable 5.2 pontua 65 em Análise Artificial, a mais alta até agora",
+"Anthropic launches roadshow for proposed initial public offering": "Anthropic lança roadshow para proposta de oferta pública inicial",
+"Today Anthropic, PBC launched the roadshow for its proposed initial public offering of its Class A common stock.": "Hoje Anthropic, PBC lançou o roadshow para sua proposta de oferta pública inicial de suas ações ordinárias Classe A."
 },
 "lembrados": [],
-"dica_dia": "2026-11-09"
+"dica_dia": "2026-11-10"
 }
