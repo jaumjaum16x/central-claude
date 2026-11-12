@@ -6855,6 +6855,81 @@
 "Lançamos o modo rápido para Claude Fable 5.2 em solicitações da API de mensagens na API Claude. O modo rápido oferece tokens de saída até 2,5x maiores por segundo, a US$ 16 por MTok de entrada e US$ 80 por MTok de saída. Defina a velocidade: \"rápida\" conforme sua solicitação, sem cabeçalho beta."
 ],
 "pt": true
+},
+"rss:https://claude.com/resources/articles/self-hosted-claude-managed-agents": {
+"k": "rss:https://claude.com/resources/articles/self-hosted-claude-managed-agents",
+"cat": "blog",
+"titulo": "Operate Claude Managed Agents inside your security perimeter",
+"url": "https://claude.com/resources/articles/self-hosted-claude-managed-agents",
+"ts": 1794441600.0,
+"resumo": "Introducing self-hosted Claude Managed Agents. Now you can run agents in your own environment, whether that’s in your own cloud or on-premise. You host the agents, credentials, and session history, and choose where requests to Claude are sent.",
+"topicos": [],
+"info": "",
+"visto": 1794508381.945412,
+"titulo_pt": "Opere Agentes Gerenciados Claude dentro do seu perímetro de segurança",
+"resumo_pt": "Apresentando os Agentes Gerenciados Claude auto-hospedados. Agora você pode executar agentes em seu próprio ambiente, seja na sua própria nuvem ou no local. Você hospeda os agentes, as credenciais e o histórico da sessão e escolhe para onde as solicitações para Claude serão enviadas.",
+"topicos_pt": [],
+"pt": true
+},
+"rss:https://claude.com/resources/articles/j-crew-style-advisor-with-claude": {
+"k": "rss:https://claude.com/resources/articles/j-crew-style-advisor-with-claude",
+"cat": "blog",
+"titulo": "J. Crew brings its signature approach to styling to life with Claude",
+"url": "https://claude.com/resources/articles/j-crew-style-advisor-with-claude",
+"ts": 1794441600.0,
+"resumo": "J.Crew's new Style Advisor uses Claude to offer a more personalized way to shop online, with complete looks instead of individual products.",
+"topicos": [],
+"info": "",
+"visto": 1794508381.945412,
+"titulo_pt": "J. Crew dá vida à sua abordagem exclusiva de estilo com Claude",
+"resumo_pt": "O novo Style Advisor da J.Crew usa Claude para oferecer uma maneira mais personalizada de fazer compras online, com looks completos em vez de produtos individuais.",
+"topicos_pt": [],
+"pt": true
+},
+"rss:https://claude.com/resources/articles/claude-tag-guide-for-startups": {
+"k": "rss:https://claude.com/resources/articles/claude-tag-guide-for-startups",
+"cat": "blog",
+"titulo": "The Claude Tag guide for startups",
+"url": "https://claude.com/resources/articles/claude-tag-guide-for-startups",
+"ts": 1794441600.0,
+"resumo": "How leading startups use Claude Tag to ship faster and scale operations",
+"topicos": [],
+"info": "",
+"visto": 1794508381.945412,
+"titulo_pt": "O guia Claude Tag para startups",
+"resumo_pt": "Como startups líderes usam Claude Tag para entregar operações mais rapidamente e escalar",
+"topicos_pt": [],
+"pt": true
+},
+"rss:https://claude.com/resources/articles/claude-for-manufacturing": {
+"k": "rss:https://claude.com/resources/articles/claude-for-manufacturing",
+"cat": "blog",
+"titulo": "Introducing Claude for Manufacturing",
+"url": "https://claude.com/resources/articles/claude-for-manufacturing",
+"ts": 1794441600.0,
+"resumo": "A new plugin with 17 skills and four connectors helps manufacturers draft quotes, quality reports, and supplier requests from the systems they already run.",
+"topicos": [],
+"info": "",
+"visto": 1794508381.945412,
+"titulo_pt": "Apresentando Claude para Manufatura",
+"resumo_pt": "Um novo plugin com 17 habilidades e quatro conectores ajuda os fabricantes a elaborar cotações, relatórios de qualidade e solicitações de fornecedores dos sistemas que já executam.",
+"topicos_pt": [],
+"pt": true
+},
+"api:November 12, 2026": {
+"k": "api:November 12, 2026",
+"cat": "api",
+"titulo": "We’ve launched self-hosted Claude Managed Agents.",
+"url": "https://platform.claude.com/docs/en/release-notes/overview",
+"ts": 1794452400.0,
+"resumo": "You run the whole Managed Agents service, not only self-hosted sandboxes, on your own infrastructure, and you store agents, sessions, and session history there. The server sends model requests to the provider that you choose, which is Anthropic by default. To request access, contact your Anthropic account team.",
+"topicos": [],
+"info": "",
+"visto": 1794508381.945412,
+"titulo_pt": "Lançamos agentes gerenciados por Claude auto-hospedados.",
+"resumo_pt": "Você executa todo o serviço de Agentes Gerenciados, não apenas sandboxes auto-hospedados, em sua própria infraestrutura, e armazena agentes, sessões e histórico de sessões lá. O servidor envia solicitações de modelo ao provedor escolhido, que é Anthropic por padrão. Para solicitar acesso, entre em contato com a equipe da sua conta Anthropic.",
+"topicos_pt": [],
+"pt": true
 }
 },
 "agenda": {
@@ -7598,8 +7673,18 @@
 "Both models require 30-day data retention, like Claude Fable 5.1 and Claude Mythos 5.1. They aren’t available under zero data retention unless expressly authorized by Anthropic. See Model-specific data retention requirements.": "Ambos os modelos requerem retenção de dados de 30 dias, como Claude Fable 5.1 e Claude Mythos 5.1. Eles não estão disponíveis sob retenção zero de dados, a menos que expressamente autorizado pela Anthropic. Consulte Requisitos de retenção de dados específicos do modelo.",
 "Thinking blocks that Claude Fable 5.2 and Claude Mythos 5.2 produce work only in the account that produced them, or in an account linked to it. See Preserved thinking.": "Bloqueia-se o pensamento de que Claude Fable 5.2 e Claude Mythos 5.2 produzem trabalho apenas na conta que os produziu, ou em uma conta vinculada a ela. Veja Pensamento preservado.",
 "Dreams (research preview) now supports Claude Fable 5.2. See Supported models.": "Dreams (visualização da pesquisa) agora suporta Claude Fable 5.2. Consulte Modelos suportados.",
-"We’ve launched fast mode for Claude Fable 5.2 in Messages API requests on the Claude API. Fast mode delivers up to 2.5x higher output tokens per second, at $16 USD per MTok of input and $80 USD per MTok of output. Set speed: \"fast\" on your request, with no beta header.": "Lançamos o modo rápido para Claude Fable 5.2 em solicitações da API de mensagens na API Claude. O modo rápido oferece tokens de saída até 2,5x maiores por segundo, a US$ 16 por MTok de entrada e US$ 80 por MTok de saída. Defina a velocidade: \"rápida\" conforme sua solicitação, sem cabeçalho beta."
+"We’ve launched fast mode for Claude Fable 5.2 in Messages API requests on the Claude API. Fast mode delivers up to 2.5x higher output tokens per second, at $16 USD per MTok of input and $80 USD per MTok of output. Set speed: \"fast\" on your request, with no beta header.": "Lançamos o modo rápido para Claude Fable 5.2 em solicitações da API de mensagens na API Claude. O modo rápido oferece tokens de saída até 2,5x maiores por segundo, a US$ 16 por MTok de entrada e US$ 80 por MTok de saída. Defina a velocidade: \"rápida\" conforme sua solicitação, sem cabeçalho beta.",
+"Operate Claude Managed Agents inside your security perimeter": "Opere Agentes Gerenciados Claude dentro do seu perímetro de segurança",
+"Introducing self-hosted Claude Managed Agents. Now you can run agents in your own environment, whether that’s in your own cloud or on-premise. You host the agents, credentials, and session history, and choose where requests to Claude are sent.": "Apresentando os Agentes Gerenciados Claude auto-hospedados. Agora você pode executar agentes em seu próprio ambiente, seja na sua própria nuvem ou no local. Você hospeda os agentes, as credenciais e o histórico da sessão e escolhe para onde as solicitações para Claude serão enviadas.",
+"J. Crew brings its signature approach to styling to life with Claude": "J. Crew dá vida à sua abordagem exclusiva de estilo com Claude",
+"J.Crew's new Style Advisor uses Claude to offer a more personalized way to shop online, with complete looks instead of individual products.": "O novo Style Advisor da J.Crew usa Claude para oferecer uma maneira mais personalizada de fazer compras online, com looks completos em vez de produtos individuais.",
+"The Claude Tag guide for startups": "O guia Claude Tag para startups",
+"How leading startups use Claude Tag to ship faster and scale operations": "Como startups líderes usam Claude Tag para entregar operações mais rapidamente e escalar",
+"Introducing Claude for Manufacturing": "Apresentando Claude para Manufatura",
+"A new plugin with 17 skills and four connectors helps manufacturers draft quotes, quality reports, and supplier requests from the systems they already run.": "Um novo plugin com 17 habilidades e quatro conectores ajuda os fabricantes a elaborar cotações, relatórios de qualidade e solicitações de fornecedores dos sistemas que já executam.",
+"We’ve launched self-hosted Claude Managed Agents.": "Lançamos agentes gerenciados por Claude auto-hospedados.",
+"You run the whole Managed Agents service, not only self-hosted sandboxes, on your own infrastructure, and you store agents, sessions, and session history there. The server sends model requests to the provider that you choose, which is Anthropic by default. To request access, contact your Anthropic account team.": "Você executa todo o serviço de Agentes Gerenciados, não apenas sandboxes auto-hospedados, em sua própria infraestrutura, e armazena agentes, sessões e histórico de sessões lá. O servidor envia solicitações de modelo ao provedor escolhido, que é Anthropic por padrão. Para solicitar acesso, entre em contato com a equipe da sua conta Anthropic."
 },
 "lembrados": [],
-"dica_dia": "2026-11-11"
+"dica_dia": "2026-11-12"
 }
