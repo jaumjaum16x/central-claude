@@ -7565,6 +7565,21 @@
 "[Code Review] Added a Download CSV button to Code Review admin settings: export review costs per repository by month, week or day, for one repository, one GitHub organization or all"
 ],
 "pt": true
+},
+"hn:50481187": {
+"k": "hn:50481187",
+"cat": "comunidade",
+"titulo": "Elevated errors on claude.ai, Claude Code, and platform.claude.com",
+"url": "https://status.claude.com/incidents/nn11wk485zfn",
+"ts": 1794565093,
+"resumo": "",
+"topicos": [],
+"info": "417 pontos e 342 comentario(s) no Hacker News",
+"visto": 1794588113.3722913,
+"titulo_pt": "Elevated errors on claude.ai, Claude Code, and platform.claude.com",
+"resumo_pt": "",
+"topicos_pt": [],
+"pt": false
 }
 },
 "agenda": {
@@ -8338,5 +8353,5 @@
 "Added a one-time startup notice naming CLAUDE_CODE_PERFORCE_MODE when Perforce settings are found and the mode is off": "Adicionado um aviso de inicialização único denominado CLAUDE_CODE_PERFORCE_MODE quando as configurações do Perforce são encontradas e o modo está desativado"
 },
 "lembrados": [],
-"dica_dia": "2026-11-12"
+"dica_dia": "2026-11-13"
 }
