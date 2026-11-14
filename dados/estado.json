@@ -8696,5 +8696,5 @@
 "Fixed a saved sonnet[1m] model setting being rewritten on a new install to a model id the API rejects": "Corrigida uma configuração de modelo de soneto[1m] salva sendo reescrita em uma nova instalação para um ID de modelo rejeitado pela API"
 },
 "lembrados": [],
-"dica_dia": "2026-11-13"
+"dica_dia": "2026-11-14"
 }
