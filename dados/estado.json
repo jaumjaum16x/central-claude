@@ -7916,10 +7916,25 @@
 "topicos": [],
 "info": "410 pontos e 198 comentario(s) no Hacker News",
 "visto": 1794812983.5860755,
-"titulo_pt": "Claude Code and Codex reverse engineered my 1994 Jeep's ECU over a $3 Arduino [video]",
+"titulo_pt": "Claude Code e Codex fizeram engenharia reversa da ECU do meu Jeep 1994 em um Arduino de US$ 3 [vídeo]",
 "resumo_pt": "",
 "topicos_pt": [],
-"pt": false
+"pt": true
+},
+"rss:https://www.anthropic.com/research/coordinated-vulnerability-disclosure-timelines": {
+"k": "rss:https://www.anthropic.com/research/coordinated-vulnerability-disclosure-timelines",
+"cat": "pesquisa",
+"titulo": "Updating our coordinated vulnerability disclosure policy timelines",
+"url": "https://www.anthropic.com/research/coordinated-vulnerability-disclosure-timelines",
+"ts": 1794787200.0,
+"resumo": "We’re shortening the disclosure window in our coordinated vulnerability disclosure (CVD) policy from 90 days to 30 days for high- and critical-severity issues, and to 45 days for all other issues.",
+"topicos": [],
+"info": "",
+"visto": 1794855029.7067924,
+"titulo_pt": "Atualizando nossos cronogramas coordenados de política de divulgação de vulnerabilidades",
+"resumo_pt": "Estamos reduzindo o período de divulgação em nossa política de divulgação coordenada de vulnerabilidades (CVD) de 90 para 30 dias para problemas de gravidade alta e crítica, e para 45 dias para todos os outros problemas.",
+"topicos_pt": [],
+"pt": true
 }
 },
 "agenda": {
@@ -8708,8 +8723,11 @@
 "Fixed recent turns sometimes going missing from a resumed session after Claude Code stopped without a clean exit": "Corrigidos turnos recentes que às vezes faltavam em uma sessão retomada após Claude Code parar sem uma saída limpa",
 "Fixed shell commands running in the launch directory after the working directory was deleted; the command now fails with a message and can be re-issued": "Comandos shell corrigidos em execução no diretório de inicialização após a exclusão do diretório de trabalho; o comando agora falha com uma mensagem e pode ser reemitido",
 "Fixed an approved plan edit being lost when the plansDirectory folder can't take it: the plan is now saved in the default plans folder, and a warning says where and why": "Corrigida uma edição de plano aprovada sendo perdida quando a pasta planosDirectory não pode aceitá-la: o plano agora é salvo na pasta de planos padrão e um aviso diz onde e por quê",
-"Fixed a saved sonnet[1m] model setting being rewritten on a new install to a model id the API rejects": "Corrigida uma configuração de modelo de soneto[1m] salva sendo reescrita em uma nova instalação para um ID de modelo rejeitado pela API"
+"Fixed a saved sonnet[1m] model setting being rewritten on a new install to a model id the API rejects": "Corrigida uma configuração de modelo de soneto[1m] salva sendo reescrita em uma nova instalação para um ID de modelo rejeitado pela API",
+"Claude Code and Codex reverse engineered my 1994 Jeep's ECU over a $3 Arduino [video]": "Claude Code e Codex fizeram engenharia reversa da ECU do meu Jeep 1994 em um Arduino de US$ 3 [vídeo]",
+"Updating our coordinated vulnerability disclosure policy timelines": "Atualizando nossos cronogramas coordenados de política de divulgação de vulnerabilidades",
+"We’re shortening the disclosure window in our coordinated vulnerability disclosure (CVD) policy from 90 days to 30 days for high- and critical-severity issues, and to 45 days for all other issues.": "Estamos reduzindo o período de divulgação em nossa política de divulgação coordenada de vulnerabilidades (CVD) de 90 para 30 dias para problemas de gravidade alta e crítica, e para 45 dias para todos os outros problemas."
 },
 "lembrados": [],
-"dica_dia": "2026-11-15"
+"dica_dia": "2026-11-16"
 }
