@@ -7905,6 +7905,21 @@
 "[Claude Tag] Fixed artifact links pasted in Slack getting no card when the poster's Claude sign-in had expired in a workspace their organization doesn't manage; a plain card now appears"
 ],
 "pt": true
+},
+"hn:50463399": {
+"k": "hn:50463399",
+"cat": "comunidade",
+"titulo": "Claude Code and Codex reverse engineered my 1994 Jeep's ECU over a $3 Arduino [video]",
+"url": "https://www.youtube.com/watch?v=WPj3aQ-xxpI",
+"ts": 1794461364,
+"resumo": "",
+"topicos": [],
+"info": "410 pontos e 198 comentario(s) no Hacker News",
+"visto": 1794812983.5860755,
+"titulo_pt": "Claude Code and Codex reverse engineered my 1994 Jeep's ECU over a $3 Arduino [video]",
+"resumo_pt": "",
+"topicos_pt": [],
+"pt": false
 }
 },
 "agenda": {
