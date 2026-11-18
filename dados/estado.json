@@ -9933,5 +9933,5 @@
 "Fixed Bash commands that delete or overwrite files (find -delete, cat a > b, sort -o) being summed up in the transcript as a search or a read": "Corrigidos comandos Bash que excluem ou sobrescrevem arquivos (find -delete, cat a > b, sort -o) sendo resumidos na transcrição como uma pesquisa ou leitura"
 },
 "lembrados": [],
-"dica_dia": "2026-11-17"
+"dica_dia": "2026-11-18"
 }
