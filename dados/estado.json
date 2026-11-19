@@ -10338,5 +10338,5 @@
 "Self-hosted runner: Added claude_code_self_hosted_orchestrator_session_queue_wait_by_reason_seconds to the orchestrator's /metrics, so a re-opened session's wait can be told from a new one's": "Executor auto-hospedado: Adicionado claude_code_self_hosted_orchestrator_session_queue_wait_by_reason_seconds às /metrics do orquestrador, para que a espera de uma sessão reaberta possa ser informada a partir de uma nova"
 },
 "lembrados": [],
-"dica_dia": "2026-11-18"
+"dica_dia": "2026-11-19"
 }
