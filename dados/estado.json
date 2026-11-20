@@ -9634,18 +9634,18 @@
 "titulo_pt": "Claude Code v2.1.329",
 "resumo_pt": "",
 "topicos_pt": [
-"Added a trust dialog warning that says where a folder's hooks are declared",
-"Added a warning in the conversation, in Claude Desktop and other non-interactive hosts, when hooks in managed settings fail to load",
-"Added this session's scheduled tasks, /loop wakeups, the goal and this conversation's forks to /tasks; x stops one after asking",
-"Added a \"Server message\" row to a server's page in /mcp that shows the JSON-RPC error message of a remote HTTP MCP server that refuses the connection",
-"Added a \"Marketplace auto-update\" row to /status that names managed marketplaces that get no automatic updates, and why",
-"Added support for turning on Code Mode while OpenTelemetry events and metrics are enabled; each tool call the code makes sends its events; tracing still keeps it off",
-"Fixed ~/.claude.json sometimes being reset to defaults when a network stall or file lock made it unreadable and cleared during a save",
-"Fixed repeated sign-outs on macOS when Claude Code could read the Keychain but not save to it. That session now stops at expiry and says why, and other sessions stay signed in",
-"Fixed /terminal-setup corrupting VS Code settings or keybindings files around block comments, and reporting success while losing the Shift+Enter binding where keybindings.json has an unclosed string",
-"Fixed files accepted through the IDE diff being saved without their last newline, and losing their byte order mark (BOM) when an edit was accepted by saving the diff in VS Code",
-"Fixed picking a cloud session in /teleport replacing your open conversation: the pick now starts a new session, as /clear does, and /resume brings the old one back",
-"Fixed /usage-credits asking Pro and Max users to log in again after opening the browser, and the link disappearing after 8 seconds if the browser doesn't open and a task stops for usage credits",
+"Adicionado um aviso de diálogo de confiança que informa onde os ganchos de uma pasta são declarados",
+"Adicionado um aviso na conversa, no Claude Desktop e em outros hosts não interativos, quando os ganchos nas configurações gerenciadas falham ao carregar",
+"Adicionadas as tarefas agendadas desta sessão, /loop wakeups, o objetivo e os forks desta conversa em /tasks; x para um depois de perguntar",
+"Adicionada uma linha \"Mensagem do servidor\" à página de um servidor em /mcp que mostra a mensagem de erro JSON-RPC de um servidor HTTP MCP remoto que recusa a conexão",
+"Adicionada uma linha \"Atualização automática do Marketplace\" a /status que nomeia os mercados gerenciados que não recebem atualizações automáticas e por quê",
+"Adicionado suporte para ativar o modo de código enquanto eventos e métricas do OpenTelemetry estão ativados; cada chamada de ferramenta que o código faz envia seus eventos; o rastreamento ainda o mantém desligado",
+"Correção de ~/.claude.json que às vezes era redefinido para os padrões quando uma trava de rede ou bloqueio de arquivo o tornava ilegível e limpo durante um salvamento",
+"Foram corrigidas saídas repetidas no macOS quando Claude Code conseguia ler o Keychain, mas não salvar nele. Essa sessão agora para quando expira e diz o motivo, e outras sessões permanecem conectadas",
+"Corrigido /configuração do terminal que corrompia as configurações do VS Code ou arquivos de atalhos de teclado em torno de comentários de bloco e relatava sucesso ao perder a ligação Shift + Enter onde keybindings.json tem uma string não fechada",
+"Arquivos corrigidos aceitos por meio da comparação IDE sendo salvos sem a última nova linha e perdendo sua marca de ordem de byte (BOM) quando uma edição era aceita salvando a comparação no VS Code",
+"Corrigida a escolha de uma sessão de nuvem em /teleport substituindo sua conversa aberta: a escolha agora inicia uma nova sessão, assim como /clear faz, e /resume traz a antiga de volta",
+"Corrigido /créditos de uso solicitando aos usuários Pro e Max que fizessem login novamente após abrir o navegador, e o link desaparecia após 8 segundos se o navegador não abrisse e uma tarefa fosse interrompida para créditos de uso",
 "Fixed /usage saying usage credits are off when they had run out or reached the monthly limit, and /model not telling Pro and Max users when that limit blocks a model that runs on usage credits",
 "Fixed the spend limit menu showing your spend as your monthly limit and wrapping its rows under the pointer in narrow windows",
 "Fixed a status line script that prints without end freezing the prompt and using gigabytes of memory",
@@ -9765,7 +9765,7 @@
 "[VSCode] Changed Down to stop at the last item of a permission prompt instead of wrapping to Yes",
 "[VSCode] Changed command output to show hidden characters and control sequences other than plain colors as symbols, so Persian, Khmer, Lao, Sinhala and Malayalam text can look broken or out of order"
 ],
-"pt": false
+"pt": true
 }
 },
 "agenda": {
@@ -10612,7 +10612,20 @@
 "Self-hosted runner: Added a start-up warning when the host's settings.json sets a default permission mode that sessions ignore": "Executor auto-hospedado: Adicionado um aviso de inicialização quando o settings.json do host define um modo de permissão padrão que as sessões ignoram",
 "Self-hosted runner: Added --hook-label to claude self-hosted-runner orchestrator, to hand chosen session labels to the spawn-runner hook": "Executor auto-hospedado: adicionado --hook-label ao orquestrador de executor auto-hospedado claude, para entregar os rótulos de sessão escolhidos ao gancho do spawn-runner",
 "Self-hosted runner: Added --metadata key=value to claude --environment, to label a session for the spawn-runner hook": "Executor auto-hospedado: adicionado --metadata key=value a claude --environment, para rotular uma sessão para o gancho spawn-runner",
-"Self-hosted runner: Added claude_code_self_hosted_orchestrator_session_queue_wait_by_reason_seconds to the orchestrator's /metrics, so a re-opened session's wait can be told from a new one's": "Executor auto-hospedado: Adicionado claude_code_self_hosted_orchestrator_session_queue_wait_by_reason_seconds às /metrics do orquestrador, para que a espera de uma sessão reaberta possa ser informada a partir de uma nova"
+"Self-hosted runner: Added claude_code_self_hosted_orchestrator_session_queue_wait_by_reason_seconds to the orchestrator's /metrics, so a re-opened session's wait can be told from a new one's": "Executor auto-hospedado: Adicionado claude_code_self_hosted_orchestrator_session_queue_wait_by_reason_seconds às /metrics do orquestrador, para que a espera de uma sessão reaberta possa ser informada a partir de uma nova",
+"Claude Code v2.1.329": "Claude Code v2.1.329",
+"Added a trust dialog warning that says where a folder's hooks are declared": "Adicionado um aviso de diálogo de confiança que informa onde os ganchos de uma pasta são declarados",
+"Added a warning in the conversation, in Claude Desktop and other non-interactive hosts, when hooks in managed settings fail to load": "Adicionado um aviso na conversa, no Claude Desktop e em outros hosts não interativos, quando os ganchos nas configurações gerenciadas falham ao carregar",
+"Added this session's scheduled tasks, /loop wakeups, the goal and this conversation's forks to /tasks; x stops one after asking": "Adicionadas as tarefas agendadas desta sessão, /loop wakeups, o objetivo e os forks desta conversa em /tasks; x para um depois de perguntar",
+"Added a \"Server message\" row to a server's page in /mcp that shows the JSON-RPC error message of a remote HTTP MCP server that refuses the connection": "Adicionada uma linha \"Mensagem do servidor\" à página de um servidor em /mcp que mostra a mensagem de erro JSON-RPC de um servidor HTTP MCP remoto que recusa a conexão",
+"Added a \"Marketplace auto-update\" row to /status that names managed marketplaces that get no automatic updates, and why": "Adicionada uma linha \"Atualização automática do Marketplace\" a /status que nomeia os mercados gerenciados que não recebem atualizações automáticas e por quê",
+"Added support for turning on Code Mode while OpenTelemetry events and metrics are enabled; each tool call the code makes sends its events; tracing still keeps it off": "Adicionado suporte para ativar o modo de código enquanto eventos e métricas do OpenTelemetry estão ativados; cada chamada de ferramenta que o código faz envia seus eventos; o rastreamento ainda o mantém desligado",
+"Fixed ~/.claude.json sometimes being reset to defaults when a network stall or file lock made it unreadable and cleared during a save": "Correção de ~/.claude.json que às vezes era redefinido para os padrões quando uma trava de rede ou bloqueio de arquivo o tornava ilegível e limpo durante um salvamento",
+"Fixed repeated sign-outs on macOS when Claude Code could read the Keychain but not save to it. That session now stops at expiry and says why, and other sessions stay signed in": "Foram corrigidas saídas repetidas no macOS quando Claude Code conseguia ler o Keychain, mas não salvar nele. Essa sessão agora para quando expira e diz o motivo, e outras sessões permanecem conectadas",
+"Fixed /terminal-setup corrupting VS Code settings or keybindings files around block comments, and reporting success while losing the Shift+Enter binding where keybindings.json has an unclosed string": "Corrigido /configuração do terminal que corrompia as configurações do VS Code ou arquivos de atalhos de teclado em torno de comentários de bloco e relatava sucesso ao perder a ligação Shift + Enter onde keybindings.json tem uma string não fechada",
+"Fixed files accepted through the IDE diff being saved without their last newline, and losing their byte order mark (BOM) when an edit was accepted by saving the diff in VS Code": "Arquivos corrigidos aceitos por meio da comparação IDE sendo salvos sem a última nova linha e perdendo sua marca de ordem de byte (BOM) quando uma edição era aceita salvando a comparação no VS Code",
+"Fixed picking a cloud session in /teleport replacing your open conversation: the pick now starts a new session, as /clear does, and /resume brings the old one back": "Corrigida a escolha de uma sessão de nuvem em /teleport substituindo sua conversa aberta: a escolha agora inicia uma nova sessão, assim como /clear faz, e /resume traz a antiga de volta",
+"Fixed /usage-credits asking Pro and Max users to log in again after opening the browser, and the link disappearing after 8 seconds if the browser doesn't open and a task stops for usage credits": "Corrigido /créditos de uso solicitando aos usuários Pro e Max que fizessem login novamente após abrir o navegador, e o link desaparecia após 8 segundos se o navegador não abrisse e uma tarefa fosse interrompida para créditos de uso"
 },
 "lembrados": [],
 "dica_dia": "2026-11-19"
