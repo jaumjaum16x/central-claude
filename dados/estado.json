@@ -9766,6 +9766,36 @@
 "[VSCode] Changed command output to show hidden characters and control sequences other than plain colors as symbols, so Persian, Khmer, Lao, Sinhala and Malayalam text can look broken or out of order"
 ],
 "pt": true
+},
+"rss:https://www.anthropic.com/news/ipo-close": {
+"k": "rss:https://www.anthropic.com/news/ipo-close",
+"cat": "noticia",
+"titulo": "Anthropic announces closing of initial public offering, including full exercise of underwriters’ option to purchase additional shares, and closing of concurrent private placement",
+"url": "https://www.anthropic.com/news/ipo-close",
+"ts": 1795132800.0,
+"resumo": "Today Anthropic, PBC announced the closing of its initial public offering of an aggregate of 1,127,000,000 shares of its Class A common stock at a public offering price of $83.00 per share, including the full exercise by the underwriters of their option to purchase an additional 147,000,000 shares of Class A common stock from Anthropic at the initial public offering price.",
+"topicos": [],
+"info": "",
+"visto": 1795211756.9424229,
+"titulo_pt": "Anthropic anuncia o fechamento da oferta pública inicial, incluindo o exercício total da opção dos subscritores de comprar ações adicionais e o fechamento da colocação privada simultânea",
+"resumo_pt": "Hoje Anthropic, PBC anunciou o fechamento de sua oferta pública inicial de um total de 1.127.000.000 ações ordinárias Classe A a um preço de oferta pública de $ 83,00 por ação, incluindo o exercício completo pelos subscritores de sua opção de comprar 147.000.000 ações ordinárias Classe A adicionais da Anthropic ao preço da oferta pública inicial.",
+"topicos_pt": [],
+"pt": true
+},
+"app:November 20, 2026Computer use (beta) for Team and Enterprise plans": {
+"k": "app:November 20, 2026Computer use (beta) for Team and Enterprise plans",
+"cat": "app",
+"titulo": "Computer use (beta) for Team and Enterprise plans",
+"url": "https://support.claude.com/en/articles/12138966-release-notes",
+"ts": 1795143600.0,
+"resumo": "Computer use lets Claude see a user's screen and work in the desktop apps they allow. It works in the new Claude experience in Claude Desktop, and from Claude on the web and Claude Mobile where Computer access is on. It's now available in beta on Team and Enterprise plans, and is rolling out to organizations gradually. For more information, see Set up computer use for Team and Enterprise plans .",
+"topicos": [],
+"info": "",
+"visto": 1795211756.9424229,
+"titulo_pt": "Uso de computador (beta) para planos Team e Enterprise",
+"resumo_pt": "O uso do computador permite que Claude veja a tela do usuário e trabalhe nos aplicativos de desktop permitidos. Funciona na nova experiência Claude no Claude Desktop, e no Claude na web e no Claude Mobile onde o acesso ao computador está ativado. Agora está disponível em versão beta nos planos Team e Enterprise e está sendo implementado gradualmente nas organizações. Para obter mais informações, consulte Configurar o uso do computador nos planos Team e Enterprise.",
+"topicos_pt": [],
+"pt": true
 }
 },
 "agenda": {
@@ -10625,7 +10655,11 @@
 "Fixed /terminal-setup corrupting VS Code settings or keybindings files around block comments, and reporting success while losing the Shift+Enter binding where keybindings.json has an unclosed string": "Corrigido /configuração do terminal que corrompia as configurações do VS Code ou arquivos de atalhos de teclado em torno de comentários de bloco e relatava sucesso ao perder a ligação Shift + Enter onde keybindings.json tem uma string não fechada",
 "Fixed files accepted through the IDE diff being saved without their last newline, and losing their byte order mark (BOM) when an edit was accepted by saving the diff in VS Code": "Arquivos corrigidos aceitos por meio da comparação IDE sendo salvos sem a última nova linha e perdendo sua marca de ordem de byte (BOM) quando uma edição era aceita salvando a comparação no VS Code",
 "Fixed picking a cloud session in /teleport replacing your open conversation: the pick now starts a new session, as /clear does, and /resume brings the old one back": "Corrigida a escolha de uma sessão de nuvem em /teleport substituindo sua conversa aberta: a escolha agora inicia uma nova sessão, assim como /clear faz, e /resume traz a antiga de volta",
-"Fixed /usage-credits asking Pro and Max users to log in again after opening the browser, and the link disappearing after 8 seconds if the browser doesn't open and a task stops for usage credits": "Corrigido /créditos de uso solicitando aos usuários Pro e Max que fizessem login novamente após abrir o navegador, e o link desaparecia após 8 segundos se o navegador não abrisse e uma tarefa fosse interrompida para créditos de uso"
+"Fixed /usage-credits asking Pro and Max users to log in again after opening the browser, and the link disappearing after 8 seconds if the browser doesn't open and a task stops for usage credits": "Corrigido /créditos de uso solicitando aos usuários Pro e Max que fizessem login novamente após abrir o navegador, e o link desaparecia após 8 segundos se o navegador não abrisse e uma tarefa fosse interrompida para créditos de uso",
+"Anthropic announces closing of initial public offering, including full exercise of underwriters’ option to purchase additional shares, and closing of concurrent private placement": "Anthropic anuncia o fechamento da oferta pública inicial, incluindo o exercício total da opção dos subscritores de comprar ações adicionais e o fechamento da colocação privada simultânea",
+"Today Anthropic, PBC announced the closing of its initial public offering of an aggregate of 1,127,000,000 shares of its Class A common stock at a public offering price of $83.00 per share, including the full exercise by the underwriters of their option to purchase an additional 147,000,000 shares of Class A common stock from Anthropic at the initial public offering price.": "Hoje Anthropic, PBC anunciou o fechamento de sua oferta pública inicial de um total de 1.127.000.000 ações ordinárias Classe A a um preço de oferta pública de $ 83,00 por ação, incluindo o exercício completo pelos subscritores de sua opção de comprar 147.000.000 ações ordinárias Classe A adicionais da Anthropic ao preço da oferta pública inicial.",
+"Computer use (beta) for Team and Enterprise plans": "Uso de computador (beta) para planos Team e Enterprise",
+"Computer use lets Claude see a user's screen and work in the desktop apps they allow. It works in the new Claude experience in Claude Desktop, and from Claude on the web and Claude Mobile where Computer access is on. It's now available in beta on Team and Enterprise plans, and is rolling out to organizations gradually. For more information, see Set up computer use for Team and Enterprise plans .": "O uso do computador permite que Claude veja a tela do usuário e trabalhe nos aplicativos de desktop permitidos. Funciona na nova experiência Claude no Claude Desktop, e no Claude na web e no Claude Mobile onde o acesso ao computador está ativado. Agora está disponível em versão beta nos planos Team e Enterprise e está sendo implementado gradualmente nas organizações. Para obter mais informações, consulte Configurar o uso do computador nos planos Team e Enterprise."
 },
 "lembrados": [],
 "dica_dia": "2026-11-20"
