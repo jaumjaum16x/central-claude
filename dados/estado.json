@@ -10480,6 +10480,36 @@
 "[VSCode] Changed a Claude tab to ignore Enter and show a notice when its Find box has lost the keyboard"
 ],
 "pt": false
+},
+"rss:https://claude.com/resources/articles/skills-over-mcp-tasks-and-more": {
+"k": "rss:https://claude.com/resources/articles/skills-over-mcp-tasks-and-more",
+"cat": "blog",
+"titulo": "MCP servers can now ship skills, run tasks, and more with Claude",
+"url": "https://claude.com/resources/articles/skills-over-mcp-tasks-and-more",
+"ts": 1795478400.0,
+"resumo": "MCP servers can now ship skills, run tasks, and more with Claude",
+"topicos": [],
+"info": "",
+"visto": 1795543817.4734492,
+"titulo_pt": "MCP servers can now ship skills, run tasks, and more with Claude",
+"resumo_pt": "MCP servers can now ship skills, run tasks, and more with Claude",
+"topicos_pt": [],
+"pt": false
+},
+"app:November 24, 2026Monthly recap is out of beta": {
+"k": "app:November 24, 2026Monthly recap is out of beta",
+"cat": "app",
+"titulo": "Monthly recap is out of beta",
+"url": "https://support.claude.com/en/articles/12138966-release-notes",
+"ts": 1795489200.0,
+"resumo": "The monthly recap (Reflect, in Settings) is now out of beta for Free, Pro, Max, and Ultra plans on the web, Claude Desktop, and Claude for iOS and Android. Recaps can now draw on your Claude Code sessions and Claude Cowork tasks in the cloud, and you can delete your stored recaps from the page. For more information, see See your monthly recap .",
+"topicos": [],
+"info": "",
+"visto": 1795543817.4734492,
+"titulo_pt": "Monthly recap is out of beta",
+"resumo_pt": "The monthly recap (Reflect, in Settings) is now out of beta for Free, Pro, Max, and Ultra plans on the web, Claude Desktop, and Claude for iOS and Android. Recaps can now draw on your Claude Code sessions and Claude Cowork tasks in the cloud, and you can delete your stored recaps from the page. For more information, see See your monthly recap .",
+"topicos_pt": [],
+"pt": false
 }
 },
 "agenda": {
@@ -11380,7 +11410,9 @@
 "bb0ce1a95f10e461",
 "aafe80cd7ca142a9",
 "bb0ce1a95f10e461",
+"aafe80cd7ca142a9",
+"bb0ce1a95f10e461",
 "aafe80cd7ca142a9"
 ],
-"dica_dia": "2026-11-23"
+"dica_dia": "2026-11-24"
 }
