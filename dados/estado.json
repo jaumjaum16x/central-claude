@@ -10159,10 +10159,10 @@
 "topicos": [],
 "info": "",
 "visto": 1795496158.5154023,
-"titulo_pt": "Introducing Claude Ship",
-"resumo_pt": "Open a pull request and get back to building. Claude can now review pull requests, fix them, and approve the ones that a team's policy allows.",
+"titulo_pt": "Apresentando Claude Ship",
+"resumo_pt": "Abra uma solicitação pull e volte à construção. Claude agora pode revisar pull requests, corrigi-los e aprovar aqueles que a política da equipe permite.",
 "topicos_pt": [],
-"pt": false
+"pt": true
 },
 "rss:https://claude.com/resources/articles/enterprise-guide-to-securing-coding-agents": {
 "k": "rss:https://claude.com/resources/articles/enterprise-guide-to-securing-coding-agents",
@@ -10174,10 +10174,10 @@
 "topicos": [],
 "info": "",
 "visto": 1795496158.5154023,
-"titulo_pt": "The enterprise guide to securing coding agents",
-"resumo_pt": "How security and technical leaders can understand and bound risk as they scale Claude Code",
+"titulo_pt": "O guia empresarial para proteger agentes de codificação",
+"resumo_pt": "Como os líderes técnicos e de segurança podem compreender e limitar os riscos à medida que escalam o Claude Code",
 "topicos_pt": [],
-"pt": false
+"pt": true
 },
 "rss:https://www.anthropic.com/research/working-with-ai": {
 "k": "rss:https://www.anthropic.com/research/working-with-ai",
@@ -10189,10 +10189,10 @@
 "topicos": [],
 "info": "",
 "visto": 1795496158.5154023,
-"titulo_pt": "Working with AI",
-"resumo_pt": "We interviewed people at 58 companies that use Claude about how AI is changing their work. They described few layoffs but reduced hiring, and said the most valuable uses of AI often involved reorganizing roles and workplaces around it.",
+"titulo_pt": "Trabalhando com IA",
+"resumo_pt": "Entrevistamos pessoas de 58 empresas que usam Claude sobre como a IA está mudando seu trabalho. Eles descreveram poucas demissões, mas reduziram as contratações, e disseram que os usos mais valiosos da IA ​​geralmente envolviam a reorganização de funções e locais de trabalho em torno dela.",
 "topicos_pt": [],
-"pt": false
+"pt": true
 },
 "code:v2.1.331": {
 "k": "code:v2.1.331",
@@ -10343,18 +10343,18 @@
 "titulo_pt": "Claude Code v2.1.331",
 "resumo_pt": "",
 "topicos_pt": [
-"Added Code Mode support in terminal sessions on Amazon Bedrock, Google Cloud's Agent Platform, Microsoft Foundry and Claude Platform on AWS",
-"Added oidc.groups_jsonpath to the Claude apps gateway, to read groups from the matching entries of a list of objects with a small subset of JSONPath (RFC 9535)",
-"Added an API connectivity section to claude doctor that reports whether the API can be reached, with the HTTP status or the error, or says why it wasn't tested",
-"Added a notice when tap-mode voice dictation stops by itself, after 15 seconds without recognized speech or at its 2-minute limit",
-"Added CLAUDE_CODE_DISABLE_RESPONSE_COMPRESSION to ask for uncompressed model responses behind a proxy that cuts compressed ones off; not advised yet for self-hosted runners or Remote Control",
-"Added CLAUDE_GATEWAY_IDP_CONNECT_BY_HOSTNAME=1 for Claude apps gateways: with oidc.use_proxy: true, sign-in requests hand the proxy an https IdP's hostname even with NO_PROXY set",
-"Added gen_ai.usage.*, gen_ai.response.model and gen_ai.operation.name to claude_code.llm_request trace spans; gen_ai.usage.input_tokens includes prompt cache tokens",
-"Added optionalDependencies to plugin manifests: plugins that install with the plugin listing them and can be disabled or uninstalled on their own",
-"Fixed MCP tool calls hanging for up to 30 minutes on some malformed replies from a local or WebSocket server",
-"Fixed PushNotification telling a headless run, such as a scheduled one, that the terminal was active in its first minute, instead of saying whether a mobile push was requested",
-"Fixed /install-github-app skipping the repository step after setup warnings when no repository was found, and Esc not going back from its workflow list and sign-in steps",
-"Fixed one-line tool results cut with no ellipsis in narrow windows, Markdown stars in the Auto mode tab of /permissions, and a hook's reason to stop a forked skill showing twice",
+"Adicionado suporte ao modo de código em sessões de terminal no Amazon Bedrock, plataforma de agente do Google Cloud, Microsoft Foundry e Claude Platform na AWS",
+"Adicionado oidc.groups_jsonpath ao gateway de aplicativos Claude, para ler grupos das entradas correspondentes de uma lista de objetos com um pequeno subconjunto de JSONPath (RFC 9535)",
+"Adicionada uma seção de conectividade da API para claude doctor que informa se a API pode ser acessada, com o status HTTP ou o erro, ou diz por que ela não foi testada",
+"Adicionado um aviso quando o ditado de voz no modo de toque para sozinho, após 15 segundos sem fala reconhecida ou no limite de 2 minutos",
+"Adicionado CLAUDE_CODE_DISABLE_RESPONSE_COMPRESSION para solicitar respostas do modelo não compactado por trás de um proxy que corta as compactadas; ainda não recomendado para executores auto-hospedados ou controle remoto",
+"Adicionado CLAUDE_GATEWAY_IDP_CONNECT_BY_HOSTNAME=1 para gateways de aplicativos Claude: com oidc.use_proxy: true, as solicitações de login entregam ao proxy um nome de host do IdP https, mesmo com NO_PROXY definido",
+"Adicionados gen_ai.usage.*, gen_ai.response.model e gen_ai.operation.name aos intervalos de rastreamento claude_code.llm_request; gen_ai.usage.input_tokens inclui tokens de cache de prompt",
+"Adicionadas dependências opcionais aos manifestos do plug-in: plug-ins que são instalados com o plug-in listando-os e podem ser desativados ou desinstalados por conta própria",
+"Corrigidas chamadas da ferramenta MCP suspensas por até 30 minutos em algumas respostas malformadas de um servidor local ou WebSocket",
+"Corrigido o PushNotification informando a uma execução headless, como uma programada, que o terminal estava ativo no primeiro minuto, em vez de informar se um push móvel foi solicitado",
+"Corrigido /install-github-app ignorando a etapa do repositório após avisos de configuração quando nenhum repositório foi encontrado e Esc não retornando de sua lista de fluxo de trabalho e etapas de login",
+"Corrigidos resultados da ferramenta de uma linha cortados sem reticências em janelas estreitas, estrelas Markdown na guia Modo automático de /permissions e um motivo de gancho para impedir que uma habilidade bifurcada fosse exibida duas vezes",
 "Fixed /diff hiding its key hints and not selecting files in windows of 24 to 26 rows, and leaving out files added with git add -N in a repository with no commits",
 "Fixed the first-run theme list showing too few themes in short windows, and /usage and other tall screens coming out garbled there",
 "Fixed /bug in fullscreen hiding its Yes and No answers behind a long report, and Yes staying out of view in very short windows",
@@ -10479,7 +10479,7 @@
 "[VSCode] Changed permission cards to show only Yes and No when allowManagedPermissionRulesOnly is set and the card would offer an allow rule; key 2 on those cards now answers No",
 "[VSCode] Changed a Claude tab to ignore Enter and show a notice when its Find box has lost the keyboard"
 ],
-"pt": false
+"pt": true
 },
 "rss:https://claude.com/resources/articles/skills-over-mcp-tasks-and-more": {
 "k": "rss:https://claude.com/resources/articles/skills-over-mcp-tasks-and-more",
@@ -10491,10 +10491,10 @@
 "topicos": [],
 "info": "",
 "visto": 1795543817.4734492,
-"titulo_pt": "MCP servers can now ship skills, run tasks, and more with Claude",
-"resumo_pt": "MCP servers can now ship skills, run tasks, and more with Claude",
+"titulo_pt": "Os servidores MCP agora podem enviar habilidades, executar tarefas e muito mais com Claude",
+"resumo_pt": "Os servidores MCP agora podem enviar habilidades, executar tarefas e muito mais com Claude",
 "topicos_pt": [],
-"pt": false
+"pt": true
 },
 "app:November 24, 2026Monthly recap is out of beta": {
 "k": "app:November 24, 2026Monthly recap is out of beta",
@@ -10506,10 +10506,10 @@
 "topicos": [],
 "info": "",
 "visto": 1795543817.4734492,
-"titulo_pt": "Monthly recap is out of beta",
-"resumo_pt": "The monthly recap (Reflect, in Settings) is now out of beta for Free, Pro, Max, and Ultra plans on the web, Claude Desktop, and Claude for iOS and Android. Recaps can now draw on your Claude Code sessions and Claude Cowork tasks in the cloud, and you can delete your stored recaps from the page. For more information, see See your monthly recap .",
+"titulo_pt": "A recapitulação mensal saiu da versão beta",
+"resumo_pt": "A recapitulação mensal (Reflect, em Configurações) já saiu da versão beta para os planos Free, Pro, Max e Ultra na web, Claude Desktop e Claude para iOS e Android. As recapitulações agora podem ser baseadas em suas sessões Claude Code e tarefas Claude Cowork na nuvem, e você pode excluir suas recapitulações armazenadas da página. Para obter mais informações, consulte Veja seu resumo mensal.",
 "topicos_pt": [],
-"pt": false
+"pt": true
 },
 "api:November 20, 2026": {
 "k": "api:November 20, 2026",
@@ -10527,16 +10527,16 @@
 ],
 "info": "",
 "visto": 1795574648.0035758,
-"titulo_pt": "5 updates to the API and Console",
+"titulo_pt": "5 atualizações na API e no Console",
 "resumo_pt": "",
 "topicos_pt": [
-"The Claude Enterprise Analytics API has a new rule for when a chat in Chat and Cowork unified counts as a session.",
-"In List User Activity, these counts can change. chat and sessions are the objects in chat_cowork_unified_metrics.",
-"For chats that the change reached, the API does not get the names of some skills and plugins that Anthropic did not make, such as your own.",
-"In Get Connector Usage, individual_auth_distinct_user_count and managed_auth_distinct_user_count can leave out some users of chats that the change reached, so they can be lower.",
-"Other counts from the connector, skill, and plugin usage endpoints can be higher or lower."
+"A API Claude Enterprise Analytics tem uma nova regra para quando um chat no Chat e no Cowork unificado conta como uma sessão.",
+"Em Listar atividades do usuário, essas contagens podem mudar. chat e sessões são os objetos em chat_cowork_unified_metrics.",
+"Para os chats que a mudança atingiu, a API não obtém os nomes de algumas habilidades e plugins que o Anthropic não fez, como o seu.",
+"Em Obter uso do conector, individual_auth_distinct_user_count e gerenciado_auth_distinct_user_count podem deixar de fora alguns usuários dos chats que a alteração atingiu, para que possam ser menores.",
+"Outras contagens dos pontos de extremidade de uso do conector, habilidade e plug-in podem ser maiores ou menores."
 ],
-"pt": false
+"pt": true
 },
 "rss:https://claude.com/resources/articles/install-as-app": {
 "k": "rss:https://claude.com/resources/articles/install-as-app",
@@ -10548,10 +10548,10 @@
 "topicos": [],
 "info": "",
 "visto": 1795574648.0035758,
-"titulo_pt": "Turn artifacts into Mac and Windows apps",
-"resumo_pt": "Open the artifacts you use every day like any other app, and let them do more on your computer",
+"titulo_pt": "Transforme artefatos em aplicativos para Mac e Windows",
+"resumo_pt": "Abra os artefatos que você usa todos os dias como qualquer outro aplicativo e deixe-os fazer mais no seu computador",
 "topicos_pt": [],
-"pt": false
+"pt": true
 },
 "app:November 24, 2026Install artifacts as apps (beta)": {
 "k": "app:November 24, 2026Install artifacts as apps (beta)",
@@ -10563,10 +10563,10 @@
 "topicos": [],
 "info": "",
 "visto": 1795574648.0035758,
-"titulo_pt": "Install artifacts as apps (beta)",
-"resumo_pt": "You can now install an artifact that Claude makes for you as an app on your Mac or Windows computer. It gets its own window and icon, opens like any other app, and can even interact with the operating system the way any other app might. This feature is currently in beta. For more information, see Install an app as an artifact .",
+"titulo_pt": "Instalar artefatos como aplicativos (beta)",
+"resumo_pt": "Agora você pode instalar um artefato que Claude cria para você como um aplicativo em seu computador Mac ou Windows. Ele obtém sua própria janela e ícone, abre como qualquer outro aplicativo e pode até interagir com o sistema operacional da mesma forma que qualquer outro aplicativo. Este recurso está atualmente em beta. Para obter mais informações, consulte Instalar um aplicativo como um artefato.",
 "topicos_pt": [],
-"pt": false
+"pt": true
 },
 "app:November 24, 2026Send files to connected apps and save files from them (beta)": {
 "k": "app:November 24, 2026Send files to connected apps and save files from them (beta)",
@@ -10578,10 +10578,10 @@
 "topicos": [],
 "info": "",
 "visto": 1795574648.0035758,
-"titulo_pt": "Send files to connected apps and save files from them (beta)",
-"resumo_pt": "Claude can now send a file to an app you've connected, or save a file that the app offers. File transfers with connectors are rolling out gradually in beta on Pro, Max, and Ultra plans, and on Team and Enterprise plans when an owner turns them on. For more information, see Send files to connected apps and save files from them .",
+"titulo_pt": "Envie arquivos para aplicativos conectados e salve arquivos deles (beta)",
+"resumo_pt": "Claude agora pode enviar um arquivo para um aplicativo que você conectou ou salvar um arquivo oferecido pelo aplicativo. As transferências de arquivos com conectores estão sendo implementadas gradualmente em versão beta nos planos Pro, Max e Ultra, e nos planos Team e Enterprise quando um proprietário os ativa. Para obter mais informações, consulte Enviar arquivos para aplicativos conectados e salvar arquivos deles.",
 "topicos_pt": [],
-"pt": false
+"pt": true
 },
 "code:v2.1.332": {
 "k": "code:v2.1.332",
@@ -10747,18 +10747,18 @@
 "titulo_pt": "Claude Code v2.1.332",
 "resumo_pt": "",
 "topicos_pt": [
-"Added skills from MCP servers (beta). They show as server:skill in the / menu; other skills keep their names",
-"Added a PreSkillShellCommand hook event that can refuse a skill or command's inline shell commands as it loads; on 2.1.331 and older, a settings file naming it opens a dialog at start",
-"Added \"Always deliver\" to the prompt for held messages from other sessions",
-"Added a footer line that stays while a flagged message has your session on a different model, until you pick one with /model",
-"Added an OpenTelemetry assistant_response event for text Claude sends through SendUserMessage or Cowork's message tool, when response logging is on",
-"Added a warning in VS Code and Desktop's Code tab when part of a session couldn't be saved, saying how to save it with /compact",
-"Added a notice in VS Code and Desktop's Code tab when a resumed session's earlier messages weren't loaded, as the terminal already shows",
-"Added your Cyber Verification Program access tier to the startup header, beside the model name when your tier applies to that model and you're signed in with a claude.ai account",
-"Fixed claude auth login reporting Login successful. when a claude.ai login could not be saved: it now exits 1 and says what to check, such as a leftover lock file or a full disk",
-"Fixed Read, @-mentions and compaction hanging on a named pipe that nothing writes to, such as a .env mounted by a locked secrets manager; the read now fails after 20 seconds",
-"Fixed turns ending in \"Prompt is too long\" after repeated auto-compaction failures when one more compaction at the context limit could have kept them going",
-"Fixed compaction failing when a summary kept running past the output limit: after three cut-off replies, the last try now asks for a shorter summary",
+"Adicionadas habilidades de servidores MCP (beta). Eles aparecem como server:skill no menu /; outras habilidades mantêm seus nomes",
+"Adicionado um evento de gancho PreSkillShellCommand que pode recusar uma habilidade ou comandos de shell embutidos do comando enquanto ele carrega; em 2.1.331 e anteriores, um arquivo de configurações com o nome dele abre uma caixa de diálogo no início",
+"Adicionado \"Sempre entregar\" ao prompt para mensagens retidas de outras sessões",
+"Adicionada uma linha de rodapé que permanece enquanto uma mensagem sinalizada tem sua sessão em um modelo diferente, até você escolher um com /model",
+"Adicionado um evento OpenTelemetry assistant_response para o texto que Claude envia por meio de SendUserMessage ou da ferramenta de mensagem do Cowork, quando o registro de resposta está ativado",
+"Adicionado um aviso na guia Código do VS Code e Desktop quando parte de uma sessão não pôde ser salva, informando como salvá-la com /compact",
+"Adicionado um aviso na guia Código do VS Code e Desktop quando as mensagens anteriores de uma sessão retomada não foram carregadas, como o terminal já mostra",
+"Adicionado seu nível de acesso do Programa de verificação cibernética ao cabeçalho de inicialização, ao lado do nome do modelo quando seu nível se aplica a esse modelo e você está conectado com uma conta claude.ai",
+"Relatório de login de autenticação de claude corrigido. Login bem-sucedido. quando um login claude.ai não pôde ser salvo: agora sai de 1 e diz o que verificar, como um arquivo de bloqueio restante ou um disco cheio",
+"Correção de leitura, @-menções e compactação penduradas em um canal nomeado no qual nada grava, como um .env montado por um gerenciador de segredos bloqueado; a leitura agora falha após 20 segundos",
+"Corrigidos turnos que terminavam em \"O prompt é muito longo\" após repetidas falhas de compactação automática, quando mais uma compactação no limite do contexto poderia mantê-los funcionando",
+"Corrigida falha de compactação quando um resumo ultrapassava o limite de saída: após três respostas de corte, a última tentativa agora solicita um resumo mais curto",
 "Fixed a freeze when a permission rule or hook condition with several wildcards was checked against a long command",
 "Fixed freezes and runaway memory use in most cases while a hook prints output without end",
 "Fixed a freeze and context overflow when a hook blocks or fails during a turn, or after /compact, with a very large log; text over about 50,000 characters is now shortened",
@@ -10898,7 +10898,22 @@
 "[VSCode] Changed voice dictation to stop by itself after 60 seconds without recognized speech or 10 minutes, up from 15 seconds and 2 minutes, so the microphone can stay on longer",
 "[VSCode] Changed voice dictation to stop, and say why, when the microphone stops sending audio or the panel stays hidden"
 ],
-"pt": false
+"pt": true
+},
+"api:November 4, 2026": {
+"k": "api:November 4, 2026",
+"cat": "api",
+"titulo": "We’ve added error codes to the SDK so you can handle one cause of an error without parsing the response body.",
+"url": "https://platform.claude.com/docs/en/release-notes/overview",
+"ts": 1793761200.0,
+"resumo": "Each API error now carries the API’s error code, message, and details, and each error code has its own exception class (in Go, a constant). To use error codes, update to the latest version of the SDK. See Handle errors.",
+"topicos": [],
+"info": "",
+"visto": 1795618306.6943307,
+"titulo_pt": "Adicionamos códigos de erro ao SDK para que você possa lidar com uma causa de erro sem analisar o corpo da resposta.",
+"resumo_pt": "Cada erro de API agora carrega o código de erro, a mensagem e os detalhes da API, e cada código de erro tem sua própria classe de exceção (em Go, uma constante). Para usar códigos de erro, atualize para a versão mais recente do SDK. Consulte Tratar erros.",
+"topicos_pt": [],
+"pt": true
 }
 },
 "agenda": {
@@ -10938,9 +10953,9 @@
 "titulo": "On November 24, 2026, a fix for an undercount of project activity in the Claude Enterprise Analytics API will go live.",
 "url": "https://platform.claude.com/docs/en/release-notes/overview",
 "origem": "Notas da API",
-"titulo_pt": "On November 24, 2026, a fix for an undercount of project activity in the Claude Enterprise Analytics API will go live.",
+"titulo_pt": "Em 24 de novembro de 2026, uma correção para uma contagem insuficiente de atividades de projeto na API Claude Enterprise Analytics será lançada.",
 "resumo_pt": "",
-"pt": false
+"pt": true
 },
 "9a972307d61971a9": {
 "k": "9a972307d61971a9",
@@ -11809,7 +11824,57 @@
 "Zero data retention with Enterprise Frontier Safeguards is now in beta": "A retenção zero de dados com Enterprise Frontier Safeguards está agora em versão beta",
 "KPMG's Todd Lohr on AI when your data is also your clients' data": "Todd Lohr da KPMG sobre IA quando seus dados também são dados de seus clientes",
 "Todd Lohr, KPMG US Vice Chair and Head of Client Technology & Innovation, on adopting frontier AI and building safeguards at the same time, and what that means for a firm that holds its clients' most sensitive data.": "Todd Lohr, vice-presidente da KPMG nos EUA e chefe de tecnologia e inovação do cliente, sobre a adoção de IA de ponta e a construção de salvaguardas ao mesmo tempo, e o que isso significa para uma empresa que detém os dados mais confidenciais de seus clientes.",
-"We announced the deprecation of the Claude Opus 4.5 model (claude-opus-4-5-20251101 and claude-opus-4-5), with retirement on the Claude API scheduled for January 22, 2027.": "Anunciamos a descontinuação do modelo Claude Opus 4.5 (claude-opus-4-5-20251101 e Claude-opus-4-5), com descontinuação da API Claude agendada para 22 de janeiro de 2027."
+"We announced the deprecation of the Claude Opus 4.5 model (claude-opus-4-5-20251101 and claude-opus-4-5), with retirement on the Claude API scheduled for January 22, 2027.": "Anunciamos a descontinuação do modelo Claude Opus 4.5 (claude-opus-4-5-20251101 e Claude-opus-4-5), com descontinuação da API Claude agendada para 22 de janeiro de 2027.",
+"Introducing Claude Ship": "Apresentando Claude Ship",
+"Open a pull request and get back to building. Claude can now review pull requests, fix them, and approve the ones that a team's policy allows.": "Abra uma solicitação pull e volte à construção. Claude agora pode revisar pull requests, corrigi-los e aprovar aqueles que a política da equipe permite.",
+"The enterprise guide to securing coding agents": "O guia empresarial para proteger agentes de codificação",
+"How security and technical leaders can understand and bound risk as they scale Claude Code": "Como os líderes técnicos e de segurança podem compreender e limitar os riscos à medida que escalam o Claude Code",
+"Working with AI": "Trabalhando com IA",
+"We interviewed people at 58 companies that use Claude about how AI is changing their work. They described few layoffs but reduced hiring, and said the most valuable uses of AI often involved reorganizing roles and workplaces around it.": "Entrevistamos pessoas de 58 empresas que usam Claude sobre como a IA está mudando seu trabalho. Eles descreveram poucas demissões, mas reduziram as contratações, e disseram que os usos mais valiosos da IA ​​geralmente envolviam a reorganização de funções e locais de trabalho em torno dela.",
+"Claude Code v2.1.331": "Claude Code v2.1.331",
+"Added Code Mode support in terminal sessions on Amazon Bedrock, Google Cloud's Agent Platform, Microsoft Foundry and Claude Platform on AWS": "Adicionado suporte ao modo de código em sessões de terminal no Amazon Bedrock, plataforma de agente do Google Cloud, Microsoft Foundry e Claude Platform na AWS",
+"Added oidc.groups_jsonpath to the Claude apps gateway, to read groups from the matching entries of a list of objects with a small subset of JSONPath (RFC 9535)": "Adicionado oidc.groups_jsonpath ao gateway de aplicativos Claude, para ler grupos das entradas correspondentes de uma lista de objetos com um pequeno subconjunto de JSONPath (RFC 9535)",
+"Added an API connectivity section to claude doctor that reports whether the API can be reached, with the HTTP status or the error, or says why it wasn't tested": "Adicionada uma seção de conectividade da API para claude doctor que informa se a API pode ser acessada, com o status HTTP ou o erro, ou diz por que ela não foi testada",
+"Added a notice when tap-mode voice dictation stops by itself, after 15 seconds without recognized speech or at its 2-minute limit": "Adicionado um aviso quando o ditado de voz no modo de toque para sozinho, após 15 segundos sem fala reconhecida ou no limite de 2 minutos",
+"Added CLAUDE_CODE_DISABLE_RESPONSE_COMPRESSION to ask for uncompressed model responses behind a proxy that cuts compressed ones off; not advised yet for self-hosted runners or Remote Control": "Adicionado CLAUDE_CODE_DISABLE_RESPONSE_COMPRESSION para solicitar respostas do modelo não compactado por trás de um proxy que corta as compactadas; ainda não recomendado para executores auto-hospedados ou controle remoto",
+"Added CLAUDE_GATEWAY_IDP_CONNECT_BY_HOSTNAME=1 for Claude apps gateways: with oidc.use_proxy: true, sign-in requests hand the proxy an https IdP's hostname even with NO_PROXY set": "Adicionado CLAUDE_GATEWAY_IDP_CONNECT_BY_HOSTNAME=1 para gateways de aplicativos Claude: com oidc.use_proxy: true, as solicitações de login entregam ao proxy um nome de host do IdP https, mesmo com NO_PROXY definido",
+"Added gen_ai.usage.*, gen_ai.response.model and gen_ai.operation.name to claude_code.llm_request trace spans; gen_ai.usage.input_tokens includes prompt cache tokens": "Adicionados gen_ai.usage.*, gen_ai.response.model e gen_ai.operation.name aos intervalos de rastreamento claude_code.llm_request; gen_ai.usage.input_tokens inclui tokens de cache de prompt",
+"Added optionalDependencies to plugin manifests: plugins that install with the plugin listing them and can be disabled or uninstalled on their own": "Adicionadas dependências opcionais aos manifestos do plug-in: plug-ins que são instalados com o plug-in listando-os e podem ser desativados ou desinstalados por conta própria",
+"Fixed MCP tool calls hanging for up to 30 minutes on some malformed replies from a local or WebSocket server": "Corrigidas chamadas da ferramenta MCP suspensas por até 30 minutos em algumas respostas malformadas de um servidor local ou WebSocket",
+"Fixed PushNotification telling a headless run, such as a scheduled one, that the terminal was active in its first minute, instead of saying whether a mobile push was requested": "Corrigido o PushNotification informando a uma execução headless, como uma programada, que o terminal estava ativo no primeiro minuto, em vez de informar se um push móvel foi solicitado",
+"Fixed /install-github-app skipping the repository step after setup warnings when no repository was found, and Esc not going back from its workflow list and sign-in steps": "Corrigido /install-github-app ignorando a etapa do repositório após avisos de configuração quando nenhum repositório foi encontrado e Esc não retornando de sua lista de fluxo de trabalho e etapas de login",
+"Fixed one-line tool results cut with no ellipsis in narrow windows, Markdown stars in the Auto mode tab of /permissions, and a hook's reason to stop a forked skill showing twice": "Corrigidos resultados da ferramenta de uma linha cortados sem reticências em janelas estreitas, estrelas Markdown na guia Modo automático de /permissions e um motivo de gancho para impedir que uma habilidade bifurcada fosse exibida duas vezes",
+"MCP servers can now ship skills, run tasks, and more with Claude": "Os servidores MCP agora podem enviar habilidades, executar tarefas e muito mais com Claude",
+"Monthly recap is out of beta": "A recapitulação mensal saiu da versão beta",
+"The monthly recap (Reflect, in Settings) is now out of beta for Free, Pro, Max, and Ultra plans on the web, Claude Desktop, and Claude for iOS and Android. Recaps can now draw on your Claude Code sessions and Claude Cowork tasks in the cloud, and you can delete your stored recaps from the page. For more information, see See your monthly recap .": "A recapitulação mensal (Reflect, em Configurações) já saiu da versão beta para os planos Free, Pro, Max e Ultra na web, Claude Desktop e Claude para iOS e Android. As recapitulações agora podem ser baseadas em suas sessões Claude Code e tarefas Claude Cowork na nuvem, e você pode excluir suas recapitulações armazenadas da página. Para obter mais informações, consulte Veja seu resumo mensal.",
+"5 updates to the API and Console": "5 atualizações na API e no Console",
+"The Claude Enterprise Analytics API has a new rule for when a chat in Chat and Cowork unified counts as a session.": "A API Claude Enterprise Analytics tem uma nova regra para quando um chat no Chat e no Cowork unificado conta como uma sessão.",
+"In List User Activity, these counts can change. chat and sessions are the objects in chat_cowork_unified_metrics.": "Em Listar atividades do usuário, essas contagens podem mudar. chat e sessões são os objetos em chat_cowork_unified_metrics.",
+"For chats that the change reached, the API does not get the names of some skills and plugins that Anthropic did not make, such as your own.": "Para os chats que a mudança atingiu, a API não obtém os nomes de algumas habilidades e plugins que o Anthropic não fez, como o seu.",
+"In Get Connector Usage, individual_auth_distinct_user_count and managed_auth_distinct_user_count can leave out some users of chats that the change reached, so they can be lower.": "Em Obter uso do conector, individual_auth_distinct_user_count e gerenciado_auth_distinct_user_count podem deixar de fora alguns usuários dos chats que a alteração atingiu, para que possam ser menores.",
+"Other counts from the connector, skill, and plugin usage endpoints can be higher or lower.": "Outras contagens dos pontos de extremidade de uso do conector, habilidade e plug-in podem ser maiores ou menores.",
+"Turn artifacts into Mac and Windows apps": "Transforme artefatos em aplicativos para Mac e Windows",
+"Open the artifacts you use every day like any other app, and let them do more on your computer": "Abra os artefatos que você usa todos os dias como qualquer outro aplicativo e deixe-os fazer mais no seu computador",
+"Install artifacts as apps (beta)": "Instalar artefatos como aplicativos (beta)",
+"You can now install an artifact that Claude makes for you as an app on your Mac or Windows computer. It gets its own window and icon, opens like any other app, and can even interact with the operating system the way any other app might. This feature is currently in beta. For more information, see Install an app as an artifact .": "Agora você pode instalar um artefato que Claude cria para você como um aplicativo em seu computador Mac ou Windows. Ele obtém sua própria janela e ícone, abre como qualquer outro aplicativo e pode até interagir com o sistema operacional da mesma forma que qualquer outro aplicativo. Este recurso está atualmente em beta. Para obter mais informações, consulte Instalar um aplicativo como um artefato.",
+"Send files to connected apps and save files from them (beta)": "Envie arquivos para aplicativos conectados e salve arquivos deles (beta)",
+"Claude can now send a file to an app you've connected, or save a file that the app offers. File transfers with connectors are rolling out gradually in beta on Pro, Max, and Ultra plans, and on Team and Enterprise plans when an owner turns them on. For more information, see Send files to connected apps and save files from them .": "Claude agora pode enviar um arquivo para um aplicativo que você conectou ou salvar um arquivo oferecido pelo aplicativo. As transferências de arquivos com conectores estão sendo implementadas gradualmente em versão beta nos planos Pro, Max e Ultra, e nos planos Team e Enterprise quando um proprietário os ativa. Para obter mais informações, consulte Enviar arquivos para aplicativos conectados e salvar arquivos deles.",
+"Claude Code v2.1.332": "Claude Code v2.1.332",
+"Added skills from MCP servers (beta). They show as server:skill in the / menu; other skills keep their names": "Adicionadas habilidades de servidores MCP (beta). Eles aparecem como server:skill no menu /; outras habilidades mantêm seus nomes",
+"Added a PreSkillShellCommand hook event that can refuse a skill or command's inline shell commands as it loads; on 2.1.331 and older, a settings file naming it opens a dialog at start": "Adicionado um evento de gancho PreSkillShellCommand que pode recusar uma habilidade ou comandos de shell embutidos do comando enquanto ele carrega; em 2.1.331 e anteriores, um arquivo de configurações com o nome dele abre uma caixa de diálogo no início",
+"Added \"Always deliver\" to the prompt for held messages from other sessions": "Adicionado \"Sempre entregar\" ao prompt para mensagens retidas de outras sessões",
+"Added a footer line that stays while a flagged message has your session on a different model, until you pick one with /model": "Adicionada uma linha de rodapé que permanece enquanto uma mensagem sinalizada tem sua sessão em um modelo diferente, até você escolher um com /model",
+"Added an OpenTelemetry assistant_response event for text Claude sends through SendUserMessage or Cowork's message tool, when response logging is on": "Adicionado um evento OpenTelemetry assistant_response para o texto que Claude envia por meio de SendUserMessage ou da ferramenta de mensagem do Cowork, quando o registro de resposta está ativado",
+"Added a warning in VS Code and Desktop's Code tab when part of a session couldn't be saved, saying how to save it with /compact": "Adicionado um aviso na guia Código do VS Code e Desktop quando parte de uma sessão não pôde ser salva, informando como salvá-la com /compact",
+"Added a notice in VS Code and Desktop's Code tab when a resumed session's earlier messages weren't loaded, as the terminal already shows": "Adicionado um aviso na guia Código do VS Code e Desktop quando as mensagens anteriores de uma sessão retomada não foram carregadas, como o terminal já mostra",
+"Added your Cyber Verification Program access tier to the startup header, beside the model name when your tier applies to that model and you're signed in with a claude.ai account": "Adicionado seu nível de acesso do Programa de verificação cibernética ao cabeçalho de inicialização, ao lado do nome do modelo quando seu nível se aplica a esse modelo e você está conectado com uma conta claude.ai",
+"Fixed claude auth login reporting Login successful. when a claude.ai login could not be saved: it now exits 1 and says what to check, such as a leftover lock file or a full disk": "Relatório de login de autenticação de claude corrigido. Login bem-sucedido. quando um login claude.ai não pôde ser salvo: agora sai de 1 e diz o que verificar, como um arquivo de bloqueio restante ou um disco cheio",
+"Fixed Read, @-mentions and compaction hanging on a named pipe that nothing writes to, such as a .env mounted by a locked secrets manager; the read now fails after 20 seconds": "Correção de leitura, @-menções e compactação penduradas em um canal nomeado no qual nada grava, como um .env montado por um gerenciador de segredos bloqueado; a leitura agora falha após 20 segundos",
+"Fixed turns ending in \"Prompt is too long\" after repeated auto-compaction failures when one more compaction at the context limit could have kept them going": "Corrigidos turnos que terminavam em \"O prompt é muito longo\" após repetidas falhas de compactação automática, quando mais uma compactação no limite do contexto poderia mantê-los funcionando",
+"Fixed compaction failing when a summary kept running past the output limit: after three cut-off replies, the last try now asks for a shorter summary": "Corrigida falha de compactação quando um resumo ultrapassava o limite de saída: após três respostas de corte, a última tentativa agora solicita um resumo mais curto",
+"We’ve added error codes to the SDK so you can handle one cause of an error without parsing the response body.": "Adicionamos códigos de erro ao SDK para que você possa lidar com uma causa de erro sem analisar o corpo da resposta.",
+"Each API error now carries the API’s error code, message, and details, and each error code has its own exception class (in Go, a constant). To use error codes, update to the latest version of the SDK. See Handle errors.": "Cada erro de API agora carrega o código de erro, a mensagem e os detalhes da API, e cada código de erro tem sua própria classe de exceção (em Go, uma constante). Para usar códigos de erro, atualize para a versão mais recente do SDK. Consulte Tratar erros.",
+"On November 24, 2026, a fix for an undercount of project activity in the Claude Enterprise Analytics API will go live.": "Em 24 de novembro de 2026, uma correção para uma contagem insuficiente de atividades de projeto na API Claude Enterprise Analytics será lançada."
 },
 "lembrados": [
 "bb0ce1a95f10e461",
@@ -11822,7 +11887,10 @@
 "aafe80cd7ca142a9",
 "bb0ce1a95f10e461",
 "aafe80cd7ca142a9",
+"9a972307d61971a9",
+"bb0ce1a95f10e461",
+"aafe80cd7ca142a9",
 "9a972307d61971a9"
 ],
-"dica_dia": "2026-11-24"
+"dica_dia": "2026-11-25"
 }
