@@ -10929,6 +10929,21 @@
 "resumo_pt": "Como migramos nossa API de mensagens de Python para Rust.",
 "topicos_pt": [],
 "pt": true
+},
+"hn:50664325": {
+"k": "hn:50664325",
+"cat": "comunidade",
+"titulo": "Claude sabotaging ML research tasks?",
+"url": "https://twitter.com/RealAstropulse/status/2126119408997466389",
+"ts": 1795768088,
+"resumo": "",
+"topicos": [],
+"info": "520 pontos e 265 comentario(s) no Hacker News",
+"visto": 1795819953.8988965,
+"titulo_pt": "Claude sabotaging ML research tasks?",
+"resumo_pt": "",
+"topicos_pt": [],
+"pt": false
 }
 },
 "agenda": {
@@ -11891,6 +11906,9 @@
 "aafe80cd7ca142a9",
 "bb0ce1a95f10e461",
 "aafe80cd7ca142a9",
+"bb0ce1a95f10e461",
+"aafe80cd7ca142a9",
+"9a972307d61971a9",
 "bb0ce1a95f10e461",
 "aafe80cd7ca142a9",
 "9a972307d61971a9",
