@@ -10962,16 +10962,6 @@
 "resumo_pt": "",
 "pt": true
 },
-"d25f214e4ec34be9": {
-"k": "d25f214e4ec34be9",
-"ts": 1795489200.0,
-"titulo": "On November 24, 2026, a fix for an undercount of project activity in the Claude Enterprise Analytics API will go live.",
-"url": "https://platform.claude.com/docs/en/release-notes/overview",
-"origem": "Notas da API",
-"titulo_pt": "Em 24 de novembro de 2026, uma correção para uma contagem insuficiente de atividades de projeto na API Claude Enterprise Analytics será lançada.",
-"resumo_pt": "",
-"pt": true
-},
 "9a972307d61971a9": {
 "k": "9a972307d61971a9",
 "ts": 1796007600.0,
@@ -11889,7 +11879,6 @@
 "Fixed compaction failing when a summary kept running past the output limit: after three cut-off replies, the last try now asks for a shorter summary": "Corrigida falha de compactação quando um resumo ultrapassava o limite de saída: após três respostas de corte, a última tentativa agora solicita um resumo mais curto",
 "We’ve added error codes to the SDK so you can handle one cause of an error without parsing the response body.": "Adicionamos códigos de erro ao SDK para que você possa lidar com uma causa de erro sem analisar o corpo da resposta.",
 "Each API error now carries the API’s error code, message, and details, and each error code has its own exception class (in Go, a constant). To use error codes, update to the latest version of the SDK. See Handle errors.": "Cada erro de API agora carrega o código de erro, a mensagem e os detalhes da API, e cada código de erro tem sua própria classe de exceção (em Go, uma constante). Para usar códigos de erro, atualize para a versão mais recente do SDK. Consulte Tratar erros.",
-"On November 24, 2026, a fix for an undercount of project activity in the Claude Enterprise Analytics API will go live.": "Em 24 de novembro de 2026, uma correção para uma contagem insuficiente de atividades de projeto na API Claude Enterprise Analytics será lançada.",
 "Migrating our Messages API to Rust": "Migrando nossa API de mensagens para Rust",
 "How we migrated our Messages API from Python to Rust.": "Como migramos nossa API de mensagens de Python para Rust."
 },
@@ -11902,6 +11891,9 @@
 "aafe80cd7ca142a9",
 "bb0ce1a95f10e461",
 "aafe80cd7ca142a9",
+"bb0ce1a95f10e461",
+"aafe80cd7ca142a9",
+"9a972307d61971a9",
 "bb0ce1a95f10e461",
 "aafe80cd7ca142a9",
 "9a972307d61971a9",
